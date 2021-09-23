@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Climbable
+  - Walkable
+  - Hand
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Building
   - Water
   - UI
   - 

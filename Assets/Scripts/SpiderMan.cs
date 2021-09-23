@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class SpiderMan : MonoBehaviour
@@ -14,6 +15,8 @@ public class SpiderMan : MonoBehaviour
     private bool _isClimbing;
     private bool _isGrounded = true;
 
+    private float _inAirTimer;
+
     private Vector3 _moveDirection;
 
     void Start()
@@ -23,16 +26,23 @@ public class SpiderMan : MonoBehaviour
 
     void Update()
     {
+        HandleFalling();
         HandleMovement();
         HandleRotation();
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (_isGrounded && collision.collider.tag == "Climbable")
+        if (_isGrounded && collision.collider.CompareTag("Climbable"))
         {
             _isClimbing = true;
             _isGrounded = false;
+        }
+
+        if (!_isGrounded && collision.collider.CompareTag("Walkable"))
+        {
+            _inAirTimer = 0;
+            _isGrounded = true;
         }
     }
 
@@ -121,24 +131,29 @@ public class SpiderMan : MonoBehaviour
         transform.rotation = playerRotation;
     }
 
+    private void HandleFalling()
+    {
+        if (!_isGrounded && !_isClimbing)
+        {
+            _inAirTimer += Time.deltaTime * 2;
+            _rigidbody.AddForce(-Vector3.up * 100f * _inAirTimer);
+        }
+    }
+
     private void HandleJumping()
     {
         if (_isGrounded)
         {
+            _rigidbody.AddForce(Vector3.up * 500);
             Animator.SetInteger("State", _isMoving ? (int)SpiderManAnimationState.RunningJump : (int)SpiderManAnimationState.Jump);
             _isGrounded = false;
-           Invoke("Land", 0.75f);
         }
         else if (_isClimbing)
         {
-            //todo: push off wall and show jump animation then on landing, change isGrounded
+            _rigidbody.AddForce(-transform.forward * 500);
+            Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
             _isClimbing = false;
         }
-    }
-
-    private void Land()
-    {
-        _isGrounded = true;
     }
 }
 
@@ -150,5 +165,6 @@ public enum SpiderManAnimationState
     Jump = 3,
     RunningJump = 4,
     Climbing = 5,
-    ClimbingIdle = 6
+    ClimbingIdle = 6,
+    ClimbJump = 7
 }

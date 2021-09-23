@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 1178058933}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 1217118525}
   - component: {fileID: 1217118524}
   - component: {fileID: 1217118523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building
   m_TagString: Climbable
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650518555158482818, guid: e7b96fa45172c4a0f84e92902c408850, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 650518555158482818, guid: e7b96fa45172c4a0f84e92902c408850, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1214,6 +1214,10 @@ PrefabInstance:
     - target: {fileID: 7904662688460459700, guid: e7b96fa45172c4a0f84e92902c408850, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 19.328045
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977178512771147265, guid: e7b96fa45172c4a0f84e92902c408850, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7977178512771147265, guid: e7b96fa45172c4a0f84e92902c408850, type: 3}
       propertyPath: m_Constraints
