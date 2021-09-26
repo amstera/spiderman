@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 
 public class SpiderMan : MonoBehaviour
@@ -13,6 +12,7 @@ public class SpiderMan : MonoBehaviour
 
     private bool _isMoving;
     private bool _isClimbing;
+    private bool _isFalling;
     private bool _isGrounded = true;
 
     private float _inAirTimer;
@@ -43,15 +43,17 @@ public class SpiderMan : MonoBehaviour
         {
             _inAirTimer = 0;
             _isGrounded = true;
+            _isFalling = false;
         }
     }
 
     private void HandleMovement()
     {
-        _moveDirection = Camera.main.transform.forward * Input.GetAxisRaw("Vertical");
-        _moveDirection += Camera.main.transform.right * Input.GetAxisRaw("Horizontal");
-        _moveDirection.Normalize();
-        _moveDirection.y = 0;
+        if (_isFalling)
+        {
+            _rigidbody.velocity = Vector3.zero;
+            return;
+        }
 
         if (_isClimbing)
         {
@@ -59,6 +61,13 @@ public class SpiderMan : MonoBehaviour
             _moveDirection.y = Input.GetAxisRaw("Vertical");
             _moveDirection.z = 0;
             _moveDirection.Normalize();
+        }
+        else
+        {
+            _moveDirection = Camera.main.transform.forward * Input.GetAxisRaw("Vertical");
+            _moveDirection += Camera.main.transform.right * Input.GetAxisRaw("Horizontal");
+            _moveDirection.Normalize();
+            _moveDirection.y = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -104,13 +113,12 @@ public class SpiderMan : MonoBehaviour
             }
         }
 
-        Vector3 movementVelocity = _moveDirection;
-        _rigidbody.velocity = movementVelocity;
+        _rigidbody.velocity = _moveDirection;
     }
 
     private void HandleRotation()
     {
-        if (_isClimbing)
+        if (_isClimbing || _isFalling)
         {
             return;
         }
@@ -150,9 +158,10 @@ public class SpiderMan : MonoBehaviour
         }
         else if (_isClimbing)
         {
-            _rigidbody.AddForce(-transform.forward * 500);
+            _rigidbody.AddForce(-transform.forward * 1500);
             Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
             _isClimbing = false;
+            _isFalling = true;
         }
     }
 }
