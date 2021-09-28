@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpiderMan : MonoBehaviour
@@ -44,6 +46,24 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer = 0;
             _isGrounded = true;
             _isFalling = false;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (_isGrounded && collision.collider.CompareTag("Walkable") && transform.position.y > 2)
+        {
+            _isGrounded = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!_isGrounded && _isClimbing && other.CompareTag("Reachable"))
+        {
+            _isClimbing = false;
+            transform.position += Vector3.up + transform.forward/3;
+            Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
         }
     }
 
@@ -143,8 +163,13 @@ public class SpiderMan : MonoBehaviour
     {
         if (!_isGrounded && !_isClimbing)
         {
-            _inAirTimer += Time.deltaTime * 2;
-            _rigidbody.AddForce(-Vector3.up * 100f * _inAirTimer);
+            _inAirTimer += Time.deltaTime * 3f;
+            _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
+
+            if (!_isFalling && _inAirTimer > 1 && transform.position.y > 8)
+            {
+                Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
+            }
         }
     }
 
@@ -157,7 +182,7 @@ public class SpiderMan : MonoBehaviour
             _isGrounded = false;
         }
         else if (_isClimbing)
-        {
+        { 
             _rigidbody.AddForce(-transform.forward * 1500);
             Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
             _isClimbing = false;
@@ -175,5 +200,7 @@ public enum SpiderManAnimationState
     RunningJump = 4,
     Climbing = 5,
     ClimbingIdle = 6,
-    ClimbJump = 7
+    ClimbJump = 7,
+    HardLanding = 8,
+    Falling = 9
 }

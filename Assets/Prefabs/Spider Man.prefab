@@ -90,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165731043141604664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26528534, y: -0.02, z: -1.4931002}
+  m_LocalPosition: {x: 0.27, y: -0.02, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1641705084736820882}
@@ -2497,7 +2497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3320617395749828184}
-  - component: {fileID: 5387368773796436176}
+  - component: {fileID: 1973130459973278128}
   m_Layer: 0
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
@@ -2520,7 +2520,7 @@ Transform:
   m_Father: {fileID: 7904662688460459700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &5387368773796436176
+--- !u!136 &1973130459973278128
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2530,10 +2530,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.07233162
-  m_Height: 0.2
-  m_Direction: 2
-  m_Center: {x: -0.0056976075, y: 0.021970792, z: 0.000000005750801}
+  m_Radius: 0.1
+  m_Height: 0.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8105826923724172245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 503439143516917269}
-  - component: {fileID: 6675324434092850205}
+  - component: {fileID: 5322584494046822413}
   m_Layer: 0
   m_Name: mixamorig:RightFoot
   m_TagString: Untagged
@@ -3084,7 +3084,7 @@ Transform:
   m_Father: {fileID: 4796185835183466163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6675324434092850205
+--- !u!136 &5322584494046822413
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3094,7 +3094,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.07233162
-  m_Height: 0.2
-  m_Direction: 2
-  m_Center: {x: -0.0056976075, y: 0.021970792, z: 0.000000005750801}
+  m_Radius: 0.1
+  m_Height: 0.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

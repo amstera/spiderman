@@ -7,6 +7,7 @@ TagManager:
   - Climbable
   - Walkable
   - Hand
+  - Reachable
   layers:
   - Default
   - TransparentFX
