@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class SpiderMan : MonoBehaviour
@@ -9,6 +7,7 @@ public class SpiderMan : MonoBehaviour
     public float RotationSpeed = 15;
 
     public Animator Animator;
+    public GameObject ClimbingObject;
 
     private Rigidbody _rigidbody;
 
@@ -37,6 +36,7 @@ public class SpiderMan : MonoBehaviour
     {
         if (_isGrounded && collision.collider.CompareTag("Climbable"))
         {
+            ClimbingObject = collision.collider.gameObject;
             _isClimbing = true;
             _isGrounded = false;
         }
@@ -62,6 +62,7 @@ public class SpiderMan : MonoBehaviour
         if (!_isGrounded && _isClimbing && other.CompareTag("Reachable"))
         {
             _isClimbing = false;
+            ClimbingObject = null;
             transform.position += Vector3.up + transform.forward/3;
             Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
         }
@@ -77,9 +78,8 @@ public class SpiderMan : MonoBehaviour
 
         if (_isClimbing)
         {
-            _moveDirection.x = -Input.GetAxisRaw("Horizontal");
-            _moveDirection.y = Input.GetAxisRaw("Vertical");
-            _moveDirection.z = 0;
+            _moveDirection = transform.up * Input.GetAxisRaw("Vertical");
+            _moveDirection += transform.right * Input.GetAxisRaw("Horizontal");
             _moveDirection.Normalize();
         }
         else
@@ -98,7 +98,7 @@ public class SpiderMan : MonoBehaviour
         _isMoving = Mathf.Abs(_moveDirection.magnitude) > 0;
         if (_isMoving)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && !_isClimbing)
             {
                 if (_isGrounded)
                 {
@@ -122,6 +122,13 @@ public class SpiderMan : MonoBehaviour
 
         if (_isClimbing && !_isGrounded)
         {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+            {
+                if (hit.collider.gameObject == ClimbingObject && hit.distance > 0.5f)
+                {
+                    _moveDirection += transform.forward;
+                }
+            }
             if (_isMoving)
             {
                 _moveDirection /= 5;
@@ -138,7 +145,17 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleRotation()
     {
-        if (_isClimbing || _isFalling)
+        if (_isClimbing)
+        {
+            if (ClimbingObject != null)
+            {
+                Vector3 targetPostition = new Vector3(ClimbingObject.transform.position.x, transform.position.y, ClimbingObject.transform.position.z);
+                transform.LookAt(targetPostition);
+            }
+            return;
+        }
+
+        if (_isFalling)
         {
             return;
         }
@@ -166,7 +183,7 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer += Time.deltaTime * 3f;
             _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
 
-            if (!_isFalling && _inAirTimer > 1 && transform.position.y > 8)
+            if (!_isFalling && _inAirTimer > 0.5f && transform.position.y > 8)
             {
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
             }
@@ -186,6 +203,7 @@ public class SpiderMan : MonoBehaviour
             _rigidbody.AddForce(-transform.forward * 1500);
             Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
             _isClimbing = false;
+            ClimbingObject = null;
             _isFalling = true;
         }
     }
