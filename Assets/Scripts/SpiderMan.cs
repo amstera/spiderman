@@ -34,9 +34,10 @@ public class SpiderMan : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (_isGrounded && collision.collider.CompareTag("Climbable"))
+        var colObject = collision.collider.gameObject;
+        if (_isGrounded && transform.position.y < 2 && collision.collider.CompareTag("Climbable"))
         {
-            ClimbingObject = collision.collider.gameObject;
+            ClimbingObject = colObject;
             _isClimbing = true;
             _isGrounded = false;
         }
@@ -44,8 +45,8 @@ public class SpiderMan : MonoBehaviour
         if (!_isGrounded && collision.collider.CompareTag("Walkable"))
         {
             _inAirTimer = 0;
-            _isGrounded = true;
             _isFalling = false;
+            _isGrounded = true;
         }
     }
 
@@ -57,17 +58,6 @@ public class SpiderMan : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (!_isGrounded && _isClimbing && other.CompareTag("Reachable"))
-        {
-            _isClimbing = false;
-            ClimbingObject = null;
-            transform.position += Vector3.up + transform.forward/3;
-            Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
-        }
-    }
-
     private void HandleMovement()
     {
         if (_isFalling)
@@ -76,11 +66,23 @@ public class SpiderMan : MonoBehaviour
             return;
         }
 
+        if (!_isGrounded && _isClimbing)
+        {
+            if (ClimbingObject != null && transform.position.y > ClimbingObject.GetComponent<MeshRenderer>().bounds.max.y * 0.9f)
+            {
+                _isClimbing = false;
+                ClimbingObject = null;
+                transform.position += Vector3.up * 2f + transform.forward / 2f;
+                Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
+            }
+        }
+
         if (_isClimbing)
         {
             _moveDirection = transform.up * Input.GetAxisRaw("Vertical");
             _moveDirection += transform.right * Input.GetAxisRaw("Horizontal");
             _moveDirection.Normalize();
+            _moveDirection *= 1.5f;
         }
         else
         {
@@ -183,7 +185,7 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer += Time.deltaTime * 3f;
             _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
 
-            if (!_isFalling && _inAirTimer > 0.5f && transform.position.y > 8)
+            if (!_isFalling && _inAirTimer > 1f && transform.position.y > 8)
             {
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
             }

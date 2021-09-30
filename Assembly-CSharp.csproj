@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/SpiderMan.cs" />
     <Compile Include="Assets/Scripts/CameraManager.cs" />
+    <Compile Include="Assets/Scripts/Building.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
