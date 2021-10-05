@@ -185,7 +185,8 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer += Time.deltaTime * 3f;
             _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
 
-            if (!_isFalling && _inAirTimer > 1f && transform.position.y > 8)
+            Physics.Raycast(transform.position, -transform.up, out RaycastHit hit);
+            if (!_isFalling && _inAirTimer > 1 && hit.distance > 5)
             {
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
             }
