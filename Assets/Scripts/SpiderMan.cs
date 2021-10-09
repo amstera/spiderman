@@ -7,13 +7,18 @@ public class SpiderMan : MonoBehaviour
     public float RotationSpeed = 15;
 
     public Animator Animator;
+    public LineRenderer LineRenderer;
     public GameObject ClimbingObject;
+    public GameObject Hand;
 
     private Rigidbody _rigidbody;
+    private SpringJoint _joint;
+    private RaycastHit _hit;
 
     private bool _isMoving;
     private bool _isClimbing;
     private bool _isFalling;
+    private bool _isSwinging;
     private bool _isGrounded = true;
 
     private float _inAirTimer;
@@ -30,16 +35,23 @@ public class SpiderMan : MonoBehaviour
         HandleFalling();
         HandleMovement();
         HandleRotation();
+        HandleShootingWeb();
+    }
+
+    void LateUpdate()
+    {
+        DrawWeb();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         var colObject = collision.collider.gameObject;
-        if (_isGrounded && transform.position.y < 2 && collision.collider.CompareTag("Climbable"))
+        if ((_isGrounded || _isSwinging) && collision.collider.CompareTag("Climbable"))
         {
             ClimbingObject = colObject;
             _isClimbing = true;
             _isGrounded = false;
+            StopSwinging();
         }
 
         if (!_isGrounded && collision.collider.CompareTag("Walkable"))
@@ -47,6 +59,7 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer = 0;
             _isFalling = false;
             _isGrounded = true;
+            StopSwinging();
         }
     }
 
@@ -63,6 +76,12 @@ public class SpiderMan : MonoBehaviour
         if (_isFalling)
         {
             _rigidbody.velocity = Vector3.zero;
+            return;
+        }
+
+        if (_isSwinging)
+        {
+            _rigidbody.velocity += (transform.forward + transform.up) * 10f * Time.deltaTime;
             return;
         }
 
@@ -180,7 +199,7 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleFalling()
     {
-        if (!_isGrounded && !_isClimbing)
+        if (!_isGrounded && !_isClimbing && !_isSwinging)
         {
             _inAirTimer += Time.deltaTime * 3f;
             _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
@@ -210,6 +229,82 @@ public class SpiderMan : MonoBehaviour
             _isFalling = true;
         }
     }
+
+    private void HandleShootingWeb()
+    {
+        if (_isSwinging || _isFalling || _isClimbing)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButton(0) && _joint == null)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 150))
+            {
+                float distanceFromPoint = Vector3.Distance(transform.position, hit.point);
+                if (hit.point.y > 3 && hit.point.y > transform.position.y)
+                {
+                    _hit = hit;
+                    _hit.point += Vector3.up;
+                    Animator.SetInteger("State", (int)SpiderManAnimationState.Swinging);
+
+                    _isSwinging = true;
+                    _isGrounded = false;
+
+                    _joint = gameObject.AddComponent<SpringJoint>();
+                    _joint.autoConfigureConnectedAnchor = false;
+                    _joint.connectedAnchor = _hit.point;
+
+                    _joint.maxDistance = distanceFromPoint * 0.85f;
+                    _joint.minDistance = distanceFromPoint * 0.25f;
+                    _joint.spring = 200f;
+                    _joint.spring = 5;
+                    _joint.damper = 0f;
+
+                    Invoke("HandleReleasingWeb", 1.25f);
+                }
+            }
+        }
+    }
+
+    private void HandleReleasingWeb()
+    {
+        if (!_isSwinging)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+        }
+        else
+        {
+            Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
+        }
+        StopSwinging();
+    }
+
+    private void StopSwinging()
+    {
+        _isSwinging = false;
+        Destroy(_joint);
+    }
+
+    private void DrawWeb()
+    {
+        if (_isSwinging)
+        {
+            LineRenderer.positionCount = 2;
+            LineRenderer.SetPosition(0, Hand.transform.position);
+            LineRenderer.SetPosition(1, _hit.point);
+        }
+        else
+        {
+            LineRenderer.positionCount = 0;
+        }
+    }
 }
 
 public enum SpiderManAnimationState
@@ -223,5 +318,6 @@ public enum SpiderManAnimationState
     ClimbingIdle = 6,
     ClimbJump = 7,
     HardLanding = 8,
-    Falling = 9
+    Falling = 9,
+    Swinging = 10
 }
