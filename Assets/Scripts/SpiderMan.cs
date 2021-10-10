@@ -46,7 +46,7 @@ public class SpiderMan : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         var colObject = collision.collider.gameObject;
-        if ((_isGrounded || _isSwinging) && collision.collider.CompareTag("Climbable"))
+        if (!_isFalling && collision.collider.CompareTag("Climbable"))
         {
             ClimbingObject = colObject;
             _isClimbing = true;
@@ -59,6 +59,7 @@ public class SpiderMan : MonoBehaviour
             _inAirTimer = 0;
             _isFalling = false;
             _isGrounded = true;
+            _isClimbing = false;
             StopSwinging();
         }
     }
@@ -91,7 +92,7 @@ public class SpiderMan : MonoBehaviour
             {
                 _isClimbing = false;
                 ClimbingObject = null;
-                transform.position += Vector3.up * 2f + transform.forward / 2f;
+                transform.position += Vector3.up * 2f + transform.forward / 1.5f;
                 Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
             }
         }
@@ -205,7 +206,7 @@ public class SpiderMan : MonoBehaviour
             _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
 
             Physics.Raycast(transform.position, -transform.up, out RaycastHit hit);
-            if (!_isFalling && _inAirTimer > 1 && hit.distance > 5)
+            if (!_isFalling && _inAirTimer > 1.5f && hit.distance > 5 && hit.collider.CompareTag("Walkable"))
             {
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
             }
@@ -232,7 +233,7 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleShootingWeb()
     {
-        if (_isSwinging || _isFalling || _isClimbing)
+        if (_isSwinging || _isClimbing)
         {
             return;
         }
@@ -252,6 +253,7 @@ public class SpiderMan : MonoBehaviour
 
                     _isSwinging = true;
                     _isGrounded = false;
+                    _isFalling = false;
 
                     _joint = gameObject.AddComponent<SpringJoint>();
                     _joint.autoConfigureConnectedAnchor = false;
