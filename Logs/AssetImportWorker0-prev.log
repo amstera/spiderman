@@ -12,104 +12,97 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53971
+51256
 Successfully changed project path to: /Users/tylergreen/Games/Spider Man
 /Users/tylergreen/Games/Spider Man
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 37.58 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 31.19 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/tylergreen/Games/Spider Man/Assets
 GfxDevice: creating device client; threaded=0
-2021-10-10 01:33:00.534 Unity[9613:239936] Color LCD preferred device: Intel Iris Pro Graphics (low power)
-2021-10-10 01:33:00.534 Unity[9613:239936] Metal devices available: 2
-2021-10-10 01:33:00.534 Unity[9613:239936] 0: AMD Radeon R9 M370X (high power)
-2021-10-10 01:33:00.534 Unity[9613:239936] 1: Intel Iris Pro Graphics (low power)
-2021-10-10 01:33:00.535 Unity[9613:239936] Using device AMD Radeon R9 M370X (high power)
+2021-10-10 13:46:32.245 Unity[4454:109234] Color LCD preferred device: AMD Radeon R9 M370X (high power)
+2021-10-10 13:46:32.245 Unity[4454:109234] Metal devices available: 2
+2021-10-10 13:46:32.245 Unity[4454:109234] 0: AMD Radeon R9 M370X (high power)
+2021-10-10 13:46:32.245 Unity[4454:109234] 1: Intel Iris Pro Graphics (low power)
+2021-10-10 13:46:32.246 Unity[4454:109234] Using device AMD Radeon R9 M370X (high power)
 Initializing Metal device caps: AMD Radeon R9 M370X
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56613
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56454
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000804 seconds.
+Registered in 0.001053 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 31.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 33.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.487 seconds
+- Completed reload, in  2.235 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000922 seconds.
+Registered in 0.000643 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.217 seconds
+- Completed reload, in  1.150 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1259 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.3 MB.
-System memory in use after: 131.3 MB.
+System memory in use before: 131.5 MB.
+System memory in use after: 131.6 MB.
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1710.
-Total: 3.546461 ms (FindLiveObjects: 0.404015 ms CreateObjectMapping: 0.090543 ms MarkObjects: 2.896121 ms  DeleteObjects: 0.153693 ms)
+Total: 2.729929 ms (FindLiveObjects: 0.211652 ms CreateObjectMapping: 0.087675 ms MarkObjects: 2.277756 ms  DeleteObjects: 0.151355 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Animations/Spider Man/Spider Man.controller
-  artifactKey: Guid(04947e66071924693a83f56a0c022f41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Spider Man/Spider Man.controller using Guid(04947e66071924693a83f56a0c022f41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a40b8f9d41d82c356f883c1cffe89dc') in 1.031878 seconds
-  Import took 1.039385 seconds .
+  path: Assets/Models/office-building-2/textures/077.jpeg
+  artifactKey: Guid(62d5a0a2408ef4746a1f1273d8d97cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/office-building-2/textures/077.jpeg using Guid(62d5a0a2408ef4746a1f1273d8d97cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c777c50a6b2401ec851ec3c07c96f9b') in 1.041904 seconds
+  Import took 1.045734 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.335322 seconds.
-  path: Assets/Animations/Spider Man/Rope Swinging.fbx
-  artifactKey: Guid(7482ebe1e1dfd4b6e9def24276b685e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Spider Man/Rope Swinging.fbx using Guid(7482ebe1e1dfd4b6e9def24276b685e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0199cfa8128431928f3295883e2a5c4') in 0.355104 seconds
-  Import took 0.358834 seconds .
+  Time since last request: 0.000290 seconds.
+  path: Assets/Models/office-building-2/textures/internal_ground_ao_texture.jpeg
+  artifactKey: Guid(8c8f034238f3a4336bb9c4269c8bd396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/office-building-2/textures/internal_ground_ao_texture.jpeg using Guid(8c8f034238f3a4336bb9c4269c8bd396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f0df1a046def2d01160aec20487612b') in 0.007996 seconds
+  Import took 0.009926 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000701 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1248 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 139.6 MB.
-System memory in use after: 139.7 MB.
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Models/office-building-2/textures/INT_LIGHT2.jpeg
+  artifactKey: Guid(9db6e9eae30b5490c940fb5156112145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/office-building-2/textures/INT_LIGHT2.jpeg using Guid(9db6e9eae30b5490c940fb5156112145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c05498ae49619d37fad4737b455bc5b') in 0.015319 seconds
+  Import took 0.017283 seconds .
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1713.
-Total: 2.469024 ms (FindLiveObjects: 0.285766 ms CreateObjectMapping: 0.067283 ms MarkObjects: 2.023245 ms  DeleteObjects: 0.091277 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.967903 seconds.
+  path: Assets/Models/office-building-2/source/SWL_1.FBX
+  artifactKey: Guid(05165f214d16241e1b81427d6e0725e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/office-building-2/source/SWL_1.FBX using Guid(05165f214d16241e1b81427d6e0725e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb83317be3509130a7b523c93f5b57b3') in 0.819118 seconds
+  Import took 0.822122 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

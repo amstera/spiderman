@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1427
     height: 690
-  m_MinSize: {x: 781, y: 492}
-  m_MaxSize: {x: 16006, y: 14042}
+  m_MinSize: {x: 779, y: 492}
+  m_MaxSize: {x: 16004, y: 14042}
   vertical: 0
-  controlID: 2201
+  controlID: 349
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1151
     height: 690
-  m_MinSize: {x: 505, y: 492}
-  m_MaxSize: {x: 12005, y: 14042}
+  m_MinSize: {x: 504, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 2202
+  controlID: 350
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,10 +170,10 @@ MonoBehaviour:
     y: 0
     width: 1151
     height: 408
-  m_MinSize: {x: 505, y: 221}
-  m_MaxSize: {x: 12005, y: 4021}
+  m_MinSize: {x: 504, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 2203
+  controlID: 351
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -425,7 +425,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d4f3ffff8a3f00008e3f00009e3f0000a43f0000b03f0000b63f0000be3f0000c23f0000c83f0000e83f0000ea3f0000ec3f0000f63f0000fa3f0000fe3f00000040000008400000124000001440000022400000244000003c4000003e4000004c400000584000006c4000007c40000082400000984000009a400000a6400000ae400000b6400000ba400000bc400000be400000c0400000c2400000c8400000ce400000
+      m_ExpandedIDs: 50fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -477,17 +477,17 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.3419211, y: 0.085051835, z: -1.5269293}
+    m_Target: {x: 23.209492, y: -0.6367593, z: 44.9005}
     speed: 2
-    m_Value: {x: 0.3419211, y: 0.085051835, z: -1.5269293}
+    m_Value: {x: 23.209492, y: -0.6367593, z: 44.9005}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -534,17 +534,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.28652224, y: 0.6252136, z: -0.26485962, w: -0.6760006}
+    m_Target: {x: 0.28648418, y: -0.38375548, z: 0.1260577, w: 0.86887795}
     speed: 2
-    m_Value: {x: -0.28652224, y: 0.6252136, z: -0.26485962, w: -0.67600054}
+    m_Value: {x: -0.28648418, y: 0.38375545, z: -0.1260577, w: -0.86887795}
   m_Size:
-    m_Target: 2.3880486
+    m_Target: 39.77881
     speed: 2
-    m_Value: 2.3880486
+    m_Value: 39.77881
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -664,22 +664,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/Spider Man
+    - Assets/Models
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Animations/Spider Man
+  - Assets/Models/office-building-2
   m_LastFoldersGridSize: 71
   m_LastProjectPath: /Users/tylergreen/Games/Spider Man
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: 563e0000
-    m_LastClickedID: 15958
-    m_ExpandedIDs: 00000000363e0000383e00003a3e00003c3e00003e3e0000403e0000423e000000ca9a3b
+    m_SelectedIDs: 463e0000
+    m_LastClickedID: 15942
+    m_ExpandedIDs: 00000000323e0000343e0000363e0000383e00003a3e00003c3e00003e3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,7 +707,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000363e0000383e00003a3e00003c3e00003e3e0000403e0000423e000000ca9a3b
+    m_ExpandedIDs: 00000000323e0000343e0000363e0000383e00003a3e00003c3e00003e3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="75" Column="6" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="60" Column="32" />
       <File FileName="Assets/Scripts/Building.cs" />
       <File FileName="Assets/Scripts/CameraManager.cs" />
     </Files>

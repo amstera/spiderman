@@ -36,6 +36,7 @@ public class SpiderMan : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleShootingWeb();
+        HandleReleasingWeb();
     }
 
     void LateUpdate()
@@ -82,7 +83,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * 1.5f) * 10f * Time.deltaTime;
             return;
         }
 
@@ -251,6 +252,9 @@ public class SpiderMan : MonoBehaviour
                     _hit.point += Vector3.up;
                     Animator.SetInteger("State", (int)SpiderManAnimationState.Swinging);
 
+                    Vector3 targetPostition = new Vector3(_hit.point.x, transform.position.y, _hit.point.z);
+                    transform.LookAt(targetPostition);
+
                     _isSwinging = true;
                     _isGrounded = false;
                     _isFalling = false;
@@ -265,13 +269,21 @@ public class SpiderMan : MonoBehaviour
                     _joint.spring = 5;
                     _joint.damper = 0f;
 
-                    Invoke("HandleReleasingWeb", 1.25f);
+                    Invoke("ReleaseWeb", 1.5f);
                 }
             }
         }
     }
 
     private void HandleReleasingWeb()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            ReleaseWeb();
+        }
+    }
+
+    private void ReleaseWeb()
     {
         if (!_isSwinging)
         {
