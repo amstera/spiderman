@@ -8,7 +8,7 @@ public class SpiderMan : MonoBehaviour
 
     public Animator Animator;
     public LineRenderer LineRenderer;
-    public GameObject ClimbingObject;
+    public Building ClimbingObject;
     public GameObject Hand;
 
     private Rigidbody _rigidbody;
@@ -49,7 +49,10 @@ public class SpiderMan : MonoBehaviour
         var colObject = collision.collider.gameObject;
         if (!_isFalling && collision.collider.CompareTag("Climbable"))
         {
-            ClimbingObject = colObject;
+            if (ClimbingObject == null)
+            {
+                ClimbingObject = colObject.GetComponent<Building>();
+            }
             _isClimbing = true;
             _isGrounded = false;
             StopSwinging();
@@ -89,7 +92,7 @@ public class SpiderMan : MonoBehaviour
 
         if (!_isGrounded && _isClimbing)
         {
-            if (ClimbingObject != null && transform.position.y > ClimbingObject.GetComponent<MeshRenderer>().bounds.max.y * 0.9f)
+            if (ClimbingObject != null && transform.position.y > ClimbingObject.GetComponent<MeshRenderer>().bounds.max.y * ClimbingObject.HeightPercent)
             {
                 _isClimbing = false;
                 ClimbingObject = null;

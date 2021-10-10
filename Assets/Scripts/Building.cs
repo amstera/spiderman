@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public SpiderMan SpiderMan;
+    public float HeightPercent = 0.9f;
 
+    private SpiderMan _spiderMan;
     private MeshRenderer _meshRenderer;
 
     void Start()
     {
-        SpiderMan = FindObjectOfType<SpiderMan>();
+        _spiderMan = FindObjectOfType<SpiderMan>();
         _meshRenderer = GetComponent<MeshRenderer>();
     }
 
     void Update()
     {
-        if (SpiderMan.transform.position.y >= _meshRenderer.bounds.max.y * 0.9)
+        if (_spiderMan.transform.position.y >= _meshRenderer.bounds.max.y * HeightPercent)
         {
             tag = "Walkable";
         }
