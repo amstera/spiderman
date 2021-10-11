@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2947326661559321701}
   - component: {fileID: 2947326661559321702}
   m_Layer: 0
-  m_Name: Skyscraper 2
+  m_Name: Skyscraper 3
   m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb51406aeccf94b9e83edbd4c0d76460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeightPercent: 0.95
+  HeightPercent: 0.9

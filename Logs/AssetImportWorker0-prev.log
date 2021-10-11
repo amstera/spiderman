@@ -1,0 +1,187 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/tylergreen/Games/Spider Man
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53936
+Successfully changed project path to: /Users/tylergreen/Games/Spider Man
+/Users/tylergreen/Games/Spider Man
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 30.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.1f1 (77a89f25062f)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/tylergreen/Games/Spider Man/Assets
+GfxDevice: creating device client; threaded=0
+2021-10-10 18:13:30.796 Unity[8681:249511] Color LCD preferred device: AMD Radeon R9 M370X (high power)
+2021-10-10 18:13:30.796 Unity[8681:249511] Metal devices available: 2
+2021-10-10 18:13:30.796 Unity[8681:249511] 0: AMD Radeon R9 M370X (high power)
+2021-10-10 18:13:30.796 Unity[8681:249511] 1: Intel Iris Pro Graphics (low power)
+2021-10-10 18:13:30.797 Unity[8681:249511] Using device AMD Radeon R9 M370X (high power)
+Initializing Metal device caps: AMD Radeon R9 M370X
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56681
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000779 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 29.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.283 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000662 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.167 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1259 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.7 MB.
+System memory in use after: 131.8 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1710.
+Total: 2.466816 ms (FindLiveObjects: 0.232153 ms CreateObjectMapping: 0.047223 ms MarkObjects: 2.058196 ms  DeleteObjects: 0.127861 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Skyscraper 3.prefab
+  artifactKey: Guid(738f8dda498224e2eaa18bc5195be9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Skyscraper 3.prefab using Guid(738f8dda498224e2eaa18bc5195be9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa897f52deba73104ad75d7b82b3304') in 0.956538 seconds
+  Import took 0.960587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Prefabs/Skyscraper 3.prefab
+  artifactKey: Guid(738f8dda498224e2eaa18bc5195be9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Skyscraper 3.prefab using Guid(738f8dda498224e2eaa18bc5195be9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa897f52deba73104ad75d7b82b3304') in 0.015111 seconds
+  Import took 0.017648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Prefabs/Skyscraper 4.prefab
+  artifactKey: Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Skyscraper 4.prefab using Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '104a489820a5bcfb069339fc8785d40d') in 0.014827 seconds
+  Import took 0.017070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.485993 seconds.
+  path: Assets/Models/Skyscraper/Materials/Gray.mat
+  artifactKey: Guid(074f99248279743d3a83d834d7dc4d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Gray.mat using Guid(074f99248279743d3a83d834d7dc4d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98b8fe3f76ea722e3a85bf6ea0c73a23') in 0.532458 seconds
+  Import took 0.536446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.046926 seconds.
+  path: Assets/Prefabs/Skyscraper 4.prefab
+  artifactKey: Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Skyscraper 4.prefab using Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8bbf80c93233e2ce94270cbbdd4e469') in 0.019508 seconds
+  Import took 0.022158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.380031 seconds.
+  path: Assets/Prefabs/Skyscraper 4.prefab
+  artifactKey: Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Skyscraper 4.prefab using Guid(68fea05541c194705a6fb953dfe3f62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d294b6cf417289bdb78b5ab0c51cfad') in 0.022819 seconds
+  Import took 0.025491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.067505 seconds.
+  path: Assets/Models/Skyscraper/Materials/Black Window.mat
+  artifactKey: Guid(4ad4baff84ff14a9c9f7e4b9cc85306a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Black Window.mat using Guid(4ad4baff84ff14a9c9f7e4b9cc85306a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961bd465e49ea732d22f5ac914ef1f9e') in 0.009739 seconds
+  Import took 0.013803 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000689 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1248 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 143.7 MB.
+System memory in use after: 143.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1753.
+Total: 2.410683 ms (FindLiveObjects: 0.280325 ms CreateObjectMapping: 0.049710 ms MarkObjects: 1.990259 ms  DeleteObjects: 0.088680 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 321.054832 seconds.
+  path: Assets/Models/Skyscraper/Materials/Black Window.mat
+  artifactKey: Guid(4ad4baff84ff14a9c9f7e4b9cc85306a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Black Window.mat using Guid(4ad4baff84ff14a9c9f7e4b9cc85306a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad6a69bccddfa59aba93bf75fa22f0d') in 0.080171 seconds
+  Import took 0.084403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Models/Skyscraper/Materials/Gray.mat
+  artifactKey: Guid(074f99248279743d3a83d834d7dc4d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Gray.mat using Guid(074f99248279743d3a83d834d7dc4d45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c295f68ba54c2047fa32635820d1c682') in 0.010183 seconds
+  Import took 0.012598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Models/Skyscraper/Materials/Yellow.mat
+  artifactKey: Guid(29f521d2670d94cc6a03ba1a642e3b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Yellow.mat using Guid(29f521d2670d94cc6a03ba1a642e3b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cfa4af0c4d1baab61a25aba633bcf7') in 0.012208 seconds
+  Import took 0.014051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Models/Skyscraper/Materials/Blue.mat
+  artifactKey: Guid(5e6c6d0903a3043259e815844957a351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Skyscraper/Materials/Blue.mat using Guid(5e6c6d0903a3043259e815844957a351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bcffc84e8551e3af4ffde09649364b0') in 0.010148 seconds
+  Import took 0.012159 seconds .
+
