@@ -37,6 +37,10 @@ public class SpiderMan : MonoBehaviour
         HandleRotation();
         HandleShootingWeb();
         HandleReleasingWeb();
+    }
+
+    void LateUpdate()
+    {
         DrawWeb();
     }
 
@@ -82,7 +86,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * 1.75f) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * 1.5f) * 10f * Time.deltaTime;
             return;
         }
 
@@ -92,7 +96,7 @@ public class SpiderMan : MonoBehaviour
             {
                 _isClimbing = false;
                 ClimbingObject = null;
-                transform.position += Vector3.up * 2f + transform.forward / 1.5f;
+                transform.position += Vector3.up * 2.25f + transform.forward / 1.5f;
                 Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
             }
         }
@@ -233,8 +237,21 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleShootingWeb()
     {
-        if (_isSwinging || _isClimbing)
+        if (_isClimbing)
         {
+            return;
+        }
+
+        if (_isSwinging)
+        {
+            if (transform.position.y < _hit.point.y && transform.position.x < _hit.point.x)
+            {
+                Animator.SetInteger("State", (int)SpiderManAnimationState.SwingingBothArms);
+            }
+            else
+            {
+                Animator.SetInteger("State", (int)SpiderManAnimationState.Swinging);
+            }
             return;
         }
 
@@ -245,10 +262,10 @@ public class SpiderMan : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 150))
             {
                 float distanceFromPoint = Vector3.Distance(transform.position, hit.point);
-                if (hit.point.y > 2 && hit.point.y > transform.position.y)
+                if (hit.point.y > 3 && hit.point.y > transform.position.y)
                 {
                     _hit = hit;
-                    _hit.point += Vector3.up;
+                    _hit.point += Vector3.up * 1.5f;
                     Animator.SetInteger("State", (int)SpiderManAnimationState.Swinging);
 
                     Vector3 targetPostition = new Vector3(_hit.point.x, transform.position.y, _hit.point.z);
@@ -268,6 +285,7 @@ public class SpiderMan : MonoBehaviour
                     _joint.spring = 5;
                     _joint.damper = 0f;
 
+                    CancelInvoke("ReleaseWeb");
                     Invoke("ReleaseWeb", 1.5f);
                 }
             }
@@ -332,5 +350,6 @@ public enum SpiderManAnimationState
     ClimbJump = 7,
     HardLanding = 8,
     Falling = 9,
-    Swinging = 10
+    Swinging = 10,
+    SwingingBothArms = 11
 }
