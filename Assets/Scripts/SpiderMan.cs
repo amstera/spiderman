@@ -37,10 +37,6 @@ public class SpiderMan : MonoBehaviour
         HandleRotation();
         HandleShootingWeb();
         HandleReleasingWeb();
-    }
-
-    void LateUpdate()
-    {
         DrawWeb();
     }
 
@@ -86,7 +82,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * 1.5f) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * 1.75f) * 10f * Time.deltaTime;
             return;
         }
 
@@ -249,7 +245,7 @@ public class SpiderMan : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 150))
             {
                 float distanceFromPoint = Vector3.Distance(transform.position, hit.point);
-                if (hit.point.y > 3 && hit.point.y > transform.position.y)
+                if (hit.point.y > 2 && hit.point.y > transform.position.y)
                 {
                     _hit = hit;
                     _hit.point += Vector3.up;
