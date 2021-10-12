@@ -59,9 +59,106 @@
     <Compile Include="Assets/Scripts/SpiderMan.cs" />
     <Compile Include="Assets/Scripts/Building.cs" />
     <Compile Include="Assets/Scripts/CameraManager.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/FxaaComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/#NVJOB Assets/Dynamic Sky (For Demo)/DynamicSkyForDemo.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/MotionBlurComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/TaaComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/VignetteModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/DitheringComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingContext.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/GrainComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/GrainModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/MaterialFactory.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/SimpleWaterShaders.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ChromaticAberrationModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/BloomComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/EyeAdaptationComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/VignetteComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/MinAttribute.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/ColorGradingComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/GraphicsUtils.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/DepthOfFieldComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/Scripts/TDControl.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/DepthOfFieldModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/FogModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/FogComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingProfile.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/Scripts/Lighthouse.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/TrackballAttribute.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/MotionBlurModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/RenderTextureFactory.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/BloomModel.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/UserLutModel.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/FXAA.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/ScreenSpaceRaytrace.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/DepthOfField.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/HistogramCompute.compute" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Tonemapping.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/MotionBlur.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Utilities/CustomMotionTexture/Shaders/CustomMotionVectorTexture.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/BuiltinDebugViews.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/VectorscopeCompute.compute" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/ScreenSpaceReflection.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/Flag/Materials/Flag.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/WaveformCompute.compute" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/DepthOfField.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/EyeHistogram.compute" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/Palm Trees/Materials/Standard 2-Sided.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/UberSecondPass.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/EyeAdaptation.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/DiskKernels.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/GrainGen.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/EyeAdaptation.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/license_unity.txt" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/#NVJOB Assets/Dynamic Sky (For Demo)/Dynamic Sky (For Demo).shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/UI/Trackball.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Bloom.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/Water Specular.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/Water Surface.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/TAA.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/AmbientOcclusion.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Common.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/license_nvjob.txt" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/TAA.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/FXAA3.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/LutGen.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/WaveformRender.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/UI/CurveBackground.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/ParadeRender.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/VectorscopeRender.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Bloom.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/ACES.cginc" />
      <None Include="Assets/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Bluenoise64/LICENSE.txt" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Bluenoise64/COPYING.txt" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor Resources/Monitors/HistogramRender.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/MotionBlur.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Uber.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Blit.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/ColorGrading.cginc" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/AmbientOcclusion.shader" />
+     <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/Fog.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -641,6 +738,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
     </Reference>
@@ -659,6 +759,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -670,12 +773,6 @@
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

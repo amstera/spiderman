@@ -8,6 +8,7 @@ TagManager:
   - Walkable
   - Hand
   - Reachable
+  - Water
   layers:
   - Default
   - TransparentFX

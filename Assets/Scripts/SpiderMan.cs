@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpiderMan : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class SpiderMan : MonoBehaviour
 
     void Update()
     {
+        CheckForWater();
         HandleFalling();
         HandleMovement();
         HandleRotation();
@@ -204,6 +206,10 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleFalling()
     {
+        if (_isGrounded && (transform.position.z < -24.6f || transform.position.z > 126f || transform.position.x < -18 || transform.position.x > 107))
+        {
+            _isGrounded = false;
+        }
         if (!_isGrounded && !_isClimbing && !_isSwinging)
         {
             _inAirTimer += Time.deltaTime * 3f;
@@ -334,6 +340,14 @@ public class SpiderMan : MonoBehaviour
         else
         {
             LineRenderer.positionCount = 0;
+        }
+    }
+
+    private void CheckForWater()
+    {
+        if (transform.position.y < -2)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
