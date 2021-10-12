@@ -88,7 +88,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * 1.5f) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.25f : 0)) * 10f * Time.deltaTime;
             return;
         }
 
@@ -213,10 +213,10 @@ public class SpiderMan : MonoBehaviour
         if (!_isGrounded && !_isClimbing && !_isSwinging)
         {
             _inAirTimer += Time.deltaTime * 3f;
-            _rigidbody.AddForce(-Vector3.up * 150f * _inAirTimer);
+            _rigidbody.AddForce(-Vector3.up * 125f * _inAirTimer);
 
             Physics.Raycast(transform.position, -transform.up, out RaycastHit hit);
-            if (!_isFalling && _inAirTimer > 1.5f && hit.distance > 5 && hit.collider.CompareTag("Walkable"))
+            if (_inAirTimer > (_isFalling ? 3 : 1.5f) && hit.distance > 5 && hit.collider.CompareTag("Walkable"))
             {
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Falling);
             }
@@ -233,7 +233,7 @@ public class SpiderMan : MonoBehaviour
         }
         else if (_isClimbing)
         { 
-            _rigidbody.AddForce(-transform.forward * 1500);
+            _rigidbody.AddForce(-transform.forward * 1000);
             Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
             _isClimbing = false;
             ClimbingObject = null;
@@ -285,14 +285,13 @@ public class SpiderMan : MonoBehaviour
                     _joint.autoConfigureConnectedAnchor = false;
                     _joint.connectedAnchor = _hit.point;
 
-                    _joint.maxDistance = distanceFromPoint * 0.85f;
-                    _joint.minDistance = distanceFromPoint * 0.25f;
-                    _joint.spring = 200f;
-                    _joint.spring = 5;
-                    _joint.damper = 0f;
+                    _joint.maxDistance = distanceFromPoint * 0.8f;
+                    _joint.minDistance = distanceFromPoint * 0.15f;
+                    _joint.spring = 35f;
+                    _joint.damper = 15f;
 
                     CancelInvoke("ReleaseWeb");
-                    Invoke("ReleaseWeb", 1.5f);
+                    Invoke("ReleaseWeb", 2f);
                 }
             }
         }
