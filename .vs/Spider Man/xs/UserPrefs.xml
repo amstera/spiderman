@@ -1,15 +1,18 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="94" Column="1" />
-      <File FileName="Assets/Scripts/Building.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CameraManager.cs" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="258" Column="14" />
+      <File FileName="Assets/Scripts/Building.cs" />
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="26" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Spider Man" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="#NVJOB Simple Water Shaders" expanded="True">
+                <Node name="#NVJOB Simple Water Shaders" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="SpiderMan.cs" selected="True" />
               </Node>
@@ -22,7 +25,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="71512aad-96b0-4c0c-8a94-b76b8df4d307" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="847767db-c6e3-4185-909d-5dc22b015b22" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

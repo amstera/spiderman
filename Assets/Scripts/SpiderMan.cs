@@ -265,7 +265,7 @@ public class SpiderMan : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 150))
+            if (Physics.Raycast(ray, out hit, 50))
             {
                 float distanceFromPoint = Vector3.Distance(transform.position, hit.point);
                 if (hit.point.y > 3 && hit.point.y > transform.position.y)
@@ -333,7 +333,7 @@ public class SpiderMan : MonoBehaviour
         if (_isSwinging)
         {
             LineRenderer.positionCount = 2;
-            LineRenderer.SetPosition(0, Hand.transform.position);
+            LineRenderer.SetPosition(0, Hand.transform.position + new Vector3(0, 0.15f, 0));
             LineRenderer.SetPosition(1, _hit.point);
         }
         else
