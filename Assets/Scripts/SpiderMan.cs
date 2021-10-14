@@ -88,7 +88,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.25f : 0)) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.5f : 0)) * 10f * Time.deltaTime;
             return;
         }
 
@@ -265,7 +265,7 @@ public class SpiderMan : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 50))
+            if (Physics.Raycast(ray, out hit, 75))
             {
                 float distanceFromPoint = Vector3.Distance(transform.position, hit.point);
                 if (hit.point.y > 3 && hit.point.y > transform.position.y)

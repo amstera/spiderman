@@ -56,44 +56,47 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/ParadeMonitor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/ReflectionUtils.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/AmbientOcclusionModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/GrainModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingInspector.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingFactory.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/CurveEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/#NVJOB Assets/Dynamic Sky (For Demo)/Editor/NVDSkyDemoMaterials.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Attributes/PostProcessingModelEditorAttribute.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DepthOfFieldModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/ColorGradingModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/VignetteModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/VectorscopeMonitor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DitheringModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/BuiltinDebugViewsEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/HistogramMonitor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingBehaviourEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/UserLutModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/FxStyles.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/Editor/NVWaterMaterials.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/CurveEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingMonitor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingInspector.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/ScreenSpaceReflectionModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/GrainModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/Editor/NVWaterMaterials.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/FogModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DitheringModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/HistogramMonitor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PropertyDrawers/TrackballGroupDrawer.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/BloomModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorGUIHelper.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DefaultPostFxModelEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/MotionBlurModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/ChromaticAberrationEditor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorResources.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/ColorGradingModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/EyeAdaptationModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DepthOfFieldModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/VignetteModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/ParadeMonitor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingFactory.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DefaultPostFxModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorGUIHelper.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/WaveformMonitor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/FogModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/AntialiasingModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/VectorscopeMonitor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/UserLutModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/FxStyles.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/MotionBlurModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PropertyDrawers/GetSetDrawer.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingMonitor.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/#NVJOB Assets/Dynamic Sky (For Demo)/Editor/NVDSkyDemoMaterials.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/AmbientOcclusionModelEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/ReflectionUtils.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingBehaviourEditor.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorResources.cs" />
+    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll" />
+     <None Include="Assets/EffectExamples/Editor/PackageManagerAssembly/PackageImportList.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -333,6 +336,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="PackageManagerAssembly">
+      <HintPath>Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
