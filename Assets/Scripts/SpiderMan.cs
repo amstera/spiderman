@@ -20,6 +20,7 @@ public class SpiderMan : MonoBehaviour
     private bool _isClimbing;
     private bool _isFalling;
     private bool _isSwinging;
+    private bool _isRecovering;
     private bool _isGrounded = true;
 
     private float _inAirTimer;
@@ -62,11 +63,27 @@ public class SpiderMan : MonoBehaviour
 
         if (!_isGrounded && collision.collider.CompareTag("Walkable"))
         {
-            _inAirTimer = 0;
+            if (_isRecovering)
+            {
+                return;
+            }
+
             _isFalling = false;
-            _isGrounded = true;
             _isClimbing = false;
             StopSwinging();
+
+            if (_inAirTimer > 2.5f && Animator.GetInteger("State") == (int)SpiderManAnimationState.Falling)
+            {
+                _isRecovering = true;
+                Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
+                Invoke("Grounded", 0.5f);
+            }
+            else
+            {
+                _isGrounded = true;
+            }
+
+            _inAirTimer = 0;
         }
     }
 
@@ -80,7 +97,7 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (_isFalling)
+        if (_isFalling || _isRecovering)
         {
             _rigidbody.velocity = Vector3.zero;
             return;
@@ -88,7 +105,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.5f : 0)) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.6f : 0)) * 10f * Time.deltaTime;
             return;
         }
 
@@ -183,7 +200,7 @@ public class SpiderMan : MonoBehaviour
             return;
         }
 
-        if (_isFalling)
+        if (_isFalling || _isRecovering)
         {
             return;
         }
@@ -212,7 +229,7 @@ public class SpiderMan : MonoBehaviour
         }
         if (!_isGrounded && !_isClimbing && !_isSwinging)
         {
-            _inAirTimer += Time.deltaTime * 3f;
+            _inAirTimer += Time.deltaTime * 2.5f;
             _rigidbody.AddForce(-Vector3.up * 125f * _inAirTimer);
 
             Physics.Raycast(transform.position, -transform.up, out RaycastHit hit);
@@ -348,6 +365,12 @@ public class SpiderMan : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    private void Grounded()
+    {
+        _isGrounded = true;
+        _isRecovering = false;
     }
 }
 

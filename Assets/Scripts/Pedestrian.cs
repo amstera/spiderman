@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Pedestrian : MonoBehaviour
 {
+    public float Speed = 5;
+
     private Vector3 _startPos;
     private Vector3 _endPos;
     private Vector3 _desPos;
@@ -16,7 +18,7 @@ public class Pedestrian : MonoBehaviour
     void Update()
     {
         transform.LookAt(new Vector3(_desPos.x, transform.position.y, _desPos.z));
-        transform.position += transform.forward * 5 * Time.deltaTime;
+        transform.position += transform.forward * Speed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, _desPos) < 2f)
         {
