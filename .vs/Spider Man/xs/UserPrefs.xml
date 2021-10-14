@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="347" Column="1" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="270" Column="46" />
       <File FileName="Assets/Scripts/Pedestrian.cs" Line="23" Column="64" />
       <File FileName="Assets/Scripts/Building.cs" />
       <File FileName="Assets/Scripts/CameraManager.cs" />
@@ -26,7 +26,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6d51e974-1c6a-4586-8276-7afee1b818f8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a2900128-367b-4f08-9408-6997d504b14b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -89,7 +89,7 @@ public class SpiderMan : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (_isGrounded && collision.collider.CompareTag("Walkable") && transform.position.y > 2)
+        if (_isGrounded && collision.collider.CompareTag("Walkable") && transform.position.y > 1)
         {
             _isGrounded = false;
         }
@@ -105,7 +105,7 @@ public class SpiderMan : MonoBehaviour
 
         if (_isSwinging)
         {
-            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.6f : 0)) * 10f * Time.deltaTime;
+            _rigidbody.velocity += (transform.forward + transform.up * (_hit.point.y > transform.position.y + 5 ? 1.75f : 0)) * 10f * Time.deltaTime;
             return;
         }
 
@@ -297,6 +297,7 @@ public class SpiderMan : MonoBehaviour
                     _isSwinging = true;
                     _isGrounded = false;
                     _isFalling = false;
+                    _isClimbing = false;
 
                     _joint = gameObject.AddComponent<SpringJoint>();
                     _joint.autoConfigureConnectedAnchor = false;
