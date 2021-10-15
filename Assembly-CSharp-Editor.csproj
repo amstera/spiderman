@@ -79,6 +79,7 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/VignetteModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/ParadeMonitor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingFactory.cs" />
+    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Models/DefaultPostFxModelEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorGUIHelper.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Monitors/WaveformMonitor.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/ReflectionUtils.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/PostProcessingBehaviourEditor.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Editor/Utils/EditorResources.cs" />
-    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll" />

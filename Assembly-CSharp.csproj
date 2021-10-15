@@ -63,7 +63,9 @@
     <Compile Include="Assets/Scripts/Building.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingProfile.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/ExtinguishableFire.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleMenu.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/MinAttribute.cs" />
@@ -72,16 +74,20 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/Scripts/Lighthouse.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/GrainModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
+    <Compile Include="Assets/Scripts/Pedestrian.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/MotionBlurModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/VignetteComponent.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/ColorGradingComponent.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/FogModel.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/DecalDestroyer.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs" />
+    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/#NVJOB Simple Water Shaders/SimpleWaterShaders.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/FogComponent.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/DepthOfFieldComponent.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleExamples.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/VignetteModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
@@ -90,10 +96,12 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Attributes/TrackballAttribute.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/GrainComponent.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleCollision.cs" />
     <Compile Include="Assets/Scripts/SpiderMan.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/FxaaComponent.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/Environment/#NVJOB Assets/Dynamic Sky (For Demo)/DynamicSkyForDemo.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
+    <Compile Include="Assets/EffectExamples/Shared/Scripts/GunShoot.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ChromaticAberrationModel.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/PostProcessingComponent.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/EyeAdaptationComponent.cs" />
@@ -107,16 +115,9 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Utils/MaterialFactory.cs" />
     <Compile Include="Assets/Scripts/CameraManager.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
-    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
-    <Compile Include="Assets/Scripts/Pedestrian.cs" />
-    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Readme.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ExtinguishableFire.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/DecalDestroyer.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleCollision.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/GunShoot.cs" />
     <Compile Include="Assets/EffectExamples/Shared/Scripts/GunAim.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleExamples.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleMenu.cs" />
+    <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/GreenGoblin.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/FXAA.shader" />
