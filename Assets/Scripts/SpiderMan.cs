@@ -12,6 +12,8 @@ public class SpiderMan : MonoBehaviour
     public Building ClimbingObject;
     public GameObject Hand;
 
+    public AudioSource WebAS;
+
     private Rigidbody _rigidbody;
     private SpringJoint _joint;
     private RaycastHit _hit;
@@ -307,6 +309,8 @@ public class SpiderMan : MonoBehaviour
                     _joint.minDistance = distanceFromPoint * 0.15f;
                     _joint.spring = 35f;
                     _joint.damper = 15f;
+
+                    WebAS.Play();
 
                     CancelInvoke("ReleaseWeb");
                     Invoke("ReleaseWeb", 2f);

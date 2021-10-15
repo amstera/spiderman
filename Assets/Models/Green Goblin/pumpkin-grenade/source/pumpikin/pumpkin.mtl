@@ -1,0 +1,28 @@
+# Blender MTL File: 'pumpkin.blend'
+# Material Count: 2
+
+newmtl shell
+Ns 100.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd pumpkin_diffuse.tga
+map_Bump pumpkin_normal_map.tga
+map_Ks pumpkin_roughness.tga
+
+newmtl shell.002
+Ns 100.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd pumpkin_diffuse.tga
+map_Bump pumpkin_normal_map.tga
+map_Ks pumpkin_roughness.tga

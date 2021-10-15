@@ -2060,8 +2060,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7603623, y: 1.5838356, z: 1}
-  m_Center: {x: -0.0040617287, y: 0.96945953, z: 0}
+  m_Size: {x: 0.7603623, y: 1.9756432, z: 2.0452893}
+  m_Center: {x: -0.004061765, y: 0.77355576, z: -0.15540576}
 --- !u!114 &4772822450780034871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,6 +2076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavMeshAgent: {fileID: 0}
   NavChild: {fileID: 0}
+  Grenade: {fileID: 1251885946039468445, guid: d39cfabd817e14308a4fb047975497af, type: 3}
 --- !u!65 &3670324889214671410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2085,7 +2086,7 @@ BoxCollider:
   m_GameObject: {fileID: 4480787904963910595}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 4.9551353, y: 1.9641453, z: 12.201932}
   m_Center: {x: -0.10099354, y: 0.49249873, z: -0.0000007152559}
