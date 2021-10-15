@@ -21,10 +21,10 @@ public class GreenGoblin : MonoBehaviour
     {
         NavMeshAgent.destination = new Vector3(_spiderMan.transform.position.x, NavChild.position.y, _spiderMan.transform.position.z);
         var spidermanY = _spiderMan.transform.position.y;
-        transform.position = new Vector3(NavChild.position.x, Mathf.Lerp(transform.position.y, spidermanY + 4, Time.deltaTime), NavChild.position.z);
+        transform.position = new Vector3(NavChild.position.x, Mathf.Lerp(transform.position.y, spidermanY + 4f, Time.deltaTime), NavChild.position.z);
         transform.rotation = NavChild.rotation;
 
-        if (Time.time - _timeSinceLastGrenade > GrenadeFireIntervalSeconds)
+        if (Vector3.Distance(transform.position, _spiderMan.transform.position) <= 7.5f && Time.time - _timeSinceLastGrenade > GrenadeFireIntervalSeconds)
         {
             _timeSinceLastGrenade = Time.time;
             Instantiate(Grenade, transform.position - Vector3.down, transform.rotation);

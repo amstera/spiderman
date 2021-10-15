@@ -143,7 +143,9 @@ MonoBehaviour:
   RunSpeed: 5
   SprintingSpeed: 10
   RotationSpeed: 15
+  Health: 100
   Animator: {fileID: 1048672755464584275}
+  HealthBar: {fileID: 0}
   LineRenderer: {fileID: 5692623278100253276}
   ClimbingObject: {fileID: 0}
   Hand: {fileID: 3525442632543265189}

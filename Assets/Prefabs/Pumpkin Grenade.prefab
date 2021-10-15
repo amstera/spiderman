@@ -77,8 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   Rb: {fileID: 2134423045382917995}
-  GrenadeForce: 15
-  ExplosionSound: {fileID: 8300000, guid: eb6691f4881584fd3b3c6969c3167a24, type: 3}
+  GrenadeForce: 18
+  ExplosionRadius: 2
 --- !u!1 &7841431343251585348
 GameObject:
   m_ObjectHideFlags: 0

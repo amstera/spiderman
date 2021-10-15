@@ -6,8 +6,10 @@ public class SpiderMan : MonoBehaviour
     public float RunSpeed = 5;
     public float SprintingSpeed = 10;
     public float RotationSpeed = 15;
+    public float Health = 100;
 
     public Animator Animator;
+    public HealthBar HealthBar;
     public LineRenderer LineRenderer;
     public Building ClimbingObject;
     public GameObject Hand;
@@ -97,6 +99,12 @@ public class SpiderMan : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int amount)
+    {
+        Health -= amount;
+        HealthBar.UpdateValue(Health);
+    }
+
     private void HandleMovement()
     {
         if (_isFalling || _isRecovering)
@@ -171,7 +179,7 @@ public class SpiderMan : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
             {
-                if (hit.collider.gameObject == ClimbingObject && hit.distance > 0.5f)
+                if (hit.collider.gameObject.name == ClimbingObject.name && hit.distance > 0.5f)
                 {
                     _moveDirection += transform.forward;
                 }
