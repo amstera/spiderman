@@ -15,6 +15,7 @@ public class SpiderMan : MonoBehaviour
     public GameObject Hand;
 
     public AudioSource WebAS;
+    public AudioSource RunningAS;
 
     private Rigidbody _rigidbody;
     private SpringJoint _joint;
@@ -107,6 +108,11 @@ public class SpiderMan : MonoBehaviour
 
     private void HandleMovement()
     {
+        if ((!_isMoving || !_isGrounded) && RunningAS.isPlaying)
+        {
+            RunningAS.Stop();
+        }
+
         if (_isFalling || _isRecovering)
         {
             _rigidbody.velocity = Vector3.zero;
@@ -151,6 +157,7 @@ public class SpiderMan : MonoBehaviour
         }
 
         _isMoving = Mathf.Abs(_moveDirection.magnitude) > 0;
+        bool isSprinting = false;
         if (_isMoving)
         {
             if (Input.GetKey(KeyCode.LeftShift) && !_isClimbing)
@@ -160,6 +167,7 @@ public class SpiderMan : MonoBehaviour
                     Animator.SetInteger("State", (int)SpiderManAnimationState.Sprint);
                 }
                 _moveDirection *= SprintingSpeed;
+                isSprinting = true;
             }
             else
             {
@@ -173,6 +181,15 @@ public class SpiderMan : MonoBehaviour
         else if (_isGrounded)
         {
             Animator.SetInteger("State", (int)SpiderManAnimationState.Idle);
+        }
+
+        if (_isGrounded && _isMoving)
+        {
+            RunningAS.pitch = isSprinting ? 1.5f : 1;
+            if (!RunningAS.isPlaying)
+            {
+                RunningAS.Play();
+            }
         }
 
         if (_isClimbing && !_isGrounded)
@@ -318,6 +335,7 @@ public class SpiderMan : MonoBehaviour
                     _joint.spring = 35f;
                     _joint.damper = 15f;
 
+                    WebAS.pitch = Random.Range(0.85f, 1.15f);
                     WebAS.Play();
 
                     CancelInvoke("ReleaseWeb");

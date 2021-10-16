@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HealthBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
     <Files>
       <File FileName="Assets/Scripts/Grenade.cs" Line="33" Column="29" />
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="188" Column="14" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="117" Column="10" />
       <File FileName="Assets/Scripts/Pedestrian.cs" />
-      <File FileName="Assets/Scripts/Building.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Building.cs" />
       <File FileName="Assets/Scripts/CameraManager.cs" />
-      <File FileName="Assets/Scripts/GreenGoblin.cs" Line="29" Column="47" />
-      <File FileName="Assets/Scripts/HealthBar.cs" Line="25" Column="6" />
+      <File FileName="Assets/Scripts/GreenGoblin.cs" />
+      <File FileName="Assets/Scripts/HealthBar.cs" Line="25" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +18,7 @@
                 <Node name="#NVJOB Simple Water Shaders" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="HealthBar.cs" selected="True" />
+                <Node name="SpiderMan.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -29,7 +29,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fd0771d4-16a4-401c-a8bf-680108c4437b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c9ef50e0-141d-43a5-93b3-ff3c6501b543" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
