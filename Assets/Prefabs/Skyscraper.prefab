@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3520523871761100292}
   - component: {fileID: 3520523871761100293}
   - component: {fileID: 3520523871761100294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skyscraper
   m_TagString: Climbable
   m_Icon: {fileID: 0}
@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb51406aeccf94b9e83edbd4c0d76460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpiderMan: {fileID: 0}
+  HeightPercent: 0.9

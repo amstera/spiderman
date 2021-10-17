@@ -16,6 +16,8 @@ public class SpiderMan : MonoBehaviour
 
     public AudioSource WebAS;
     public AudioSource RunningAS;
+    public AudioSource ClimbingAS;
+    public AudioSource HurtAS;
 
     private Rigidbody _rigidbody;
     private SpringJoint _joint;
@@ -64,6 +66,12 @@ public class SpiderMan : MonoBehaviour
             _isClimbing = true;
             _isGrounded = false;
             StopSwinging();
+
+            if (!ClimbingAS.isPlaying)
+            {
+                ClimbingAS.pitch = Random.Range(0.85f, 1.15f);
+                ClimbingAS.Play();
+            }
         }
 
         if (!_isGrounded && collision.collider.CompareTag("Walkable"))
@@ -104,6 +112,7 @@ public class SpiderMan : MonoBehaviour
     {
         Health -= amount;
         HealthBar.UpdateValue(Health);
+        HurtAS.Play();
     }
 
     private void HandleMovement()
@@ -111,6 +120,11 @@ public class SpiderMan : MonoBehaviour
         if ((!_isMoving || !_isGrounded) && RunningAS.isPlaying)
         {
             RunningAS.Stop();
+        }
+
+        if (!_isClimbing && ClimbingAS.isPlaying)
+        {
+            ClimbingAS.Stop();
         }
 
         if (_isFalling || _isRecovering)
@@ -129,6 +143,7 @@ public class SpiderMan : MonoBehaviour
         {
             if (ClimbingObject != null && transform.position.y > ClimbingObject.GetComponent<MeshRenderer>().bounds.max.y * ClimbingObject.HeightPercent)
             {
+                ClimbingAS.Stop();
                 _isClimbing = false;
                 ClimbingObject = null;
                 transform.position += Vector3.up * 2.25f + transform.forward / 1.5f;
@@ -200,14 +215,24 @@ public class SpiderMan : MonoBehaviour
                 {
                     _moveDirection += transform.forward;
                 }
+                else if (hit.distance > 2)
+                {
+                    StopClimbing();
+                }
             }
             if (_isMoving)
             {
+                if (!ClimbingAS.isPlaying)
+                {
+                    ClimbingAS.pitch = Random.Range(0.85f, 1.15f);
+                    ClimbingAS.Play();
+                }
                 _moveDirection /= 5;
                 Animator.SetInteger("State", (int)SpiderManAnimationState.Climbing);
             }
             else
             {
+                ClimbingAS.Stop();
                 Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbingIdle);
             }
         }
@@ -276,12 +301,8 @@ public class SpiderMan : MonoBehaviour
             _isGrounded = false;
         }
         else if (_isClimbing)
-        { 
-            _rigidbody.AddForce(-transform.forward * 1000);
-            Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
-            _isClimbing = false;
-            ClimbingObject = null;
-            _isFalling = true;
+        {
+            StopClimbing();
         }
     }
 
@@ -402,6 +423,16 @@ public class SpiderMan : MonoBehaviour
     {
         _isGrounded = true;
         _isRecovering = false;
+    }
+
+    private void StopClimbing()
+    {
+        ClimbingAS.Stop();
+        _rigidbody.AddForce(-transform.forward * 1000);
+        Animator.SetInteger("State", (int)SpiderManAnimationState.ClimbJump);
+        _isClimbing = false;
+        ClimbingObject = null;
+        _isFalling = true;
     }
 }
 

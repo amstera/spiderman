@@ -32,7 +32,7 @@ public class HealthBar : MonoBehaviour
             Bar.value = CurrentValue / 100;
 
             var lowHealthBorderColor = LowHealthBorder.color;
-            lowHealthBorderColor.a = ((1 - Bar.value) * 120) / 255f;
+            lowHealthBorderColor.a = ((1 - Bar.value) * 135) / 255f;
             LowHealthBorder.color = lowHealthBorderColor;
         }
     }

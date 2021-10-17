@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3520523871761100292}
   - component: {fileID: 3520523871761100293}
   - component: {fileID: 3520523871761100294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skyscraper 1
   m_TagString: Climbable
   m_Icon: {fileID: 0}

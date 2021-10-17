@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MiniMap.cs">
     <Files>
-      <File FileName="Assets/Scripts/Grenade.cs" Line="33" Column="29" />
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="117" Column="10" />
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HealthBar.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Grenade.cs" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="116" Column="6" />
       <File FileName="Assets/Scripts/Pedestrian.cs" />
       <File FileName="Assets/Scripts/Building.cs" />
-      <File FileName="Assets/Scripts/CameraManager.cs" />
       <File FileName="Assets/Scripts/GreenGoblin.cs" />
-      <File FileName="Assets/Scripts/HealthBar.cs" Line="25" Column="10" />
+      <File FileName="Assets/Scripts/MiniMap.cs" Line="12" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
                 <Node name="#NVJOB Simple Water Shaders" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="SpiderMan.cs" selected="True" />
+                <Node name="MiniMap.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -29,7 +30,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c9ef50e0-141d-43a5-93b3-ff3c6501b543" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3f8f8d3f-7a8e-4b2b-bd21-9485dc626643" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
