@@ -19,7 +19,7 @@ TagManager:
   - PP
   - Player
   - Mini Map
-  - 
+  - Water
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: First
+    uniqueID: 616196705
     locked: 0
