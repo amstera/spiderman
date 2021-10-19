@@ -69,7 +69,7 @@ public class SpiderMan : MonoBehaviour
 
             if (!ClimbingAS.isPlaying)
             {
-                ClimbingAS.pitch = Random.Range(0.85f, 1.15f);
+                ClimbingAS.pitch = Random.Range(0.95f, 1.05f);
                 ClimbingAS.Play();
             }
         }
@@ -224,7 +224,7 @@ public class SpiderMan : MonoBehaviour
             {
                 if (!ClimbingAS.isPlaying)
                 {
-                    ClimbingAS.pitch = Random.Range(0.85f, 1.15f);
+                    ClimbingAS.pitch = Random.Range(0.95f, 1.05f);
                     ClimbingAS.Play();
                 }
                 _moveDirection /= 5;

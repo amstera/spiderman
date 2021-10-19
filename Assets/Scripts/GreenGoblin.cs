@@ -24,7 +24,7 @@ public class GreenGoblin : MonoBehaviour
         transform.position = new Vector3(NavChild.position.x, Mathf.Lerp(transform.position.y, spidermanY + 4f, Time.deltaTime), NavChild.position.z);
         transform.rotation = NavChild.rotation;
 
-        if (Vector3.Distance(transform.position, _spiderMan.transform.position) <= 7.5f && Time.time - _timeSinceLastGrenade > GrenadeFireIntervalSeconds)
+        if (Vector3.Distance(transform.position, _spiderMan.transform.position) <= 6f && Time.time - _timeSinceLastGrenade > GrenadeFireIntervalSeconds)
         {
             _timeSinceLastGrenade = Time.time;
             Instantiate(Grenade, transform.position - Vector3.down, transform.rotation);

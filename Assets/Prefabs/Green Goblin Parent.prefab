@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3297229819470550114}
   m_Layer: 0
-  m_Name: Green Goblin 1
+  m_Name: Green Goblin Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 3297229820214853563}
     - target: {fileID: 4772822450780034871, guid: 2dfe5456f83b44492acbd14da7f6d6b8, type: 3}
       propertyPath: GrenadeFireIntervalSeconds
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6823366461504217864, guid: 2dfe5456f83b44492acbd14da7f6d6b8, type: 3}
