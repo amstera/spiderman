@@ -7,6 +7,6 @@ public class MiniMap : MonoBehaviour
     void LateUpdate()
     {
         transform.position = Spiderman.transform.position + Vector3.up * 50;
-        transform.eulerAngles = new Vector3(90, Mathf.Lerp(transform.eulerAngles.y, Spiderman.transform.eulerAngles.y, Time.deltaTime * 5), Mathf.Lerp(transform.eulerAngles.z, Spiderman.transform.eulerAngles.z, Time.deltaTime * 5));
+        transform.eulerAngles = new Vector3(90, Mathf.Lerp(transform.eulerAngles.y, Spiderman.transform.eulerAngles.y, Time.deltaTime), 0);
     }
 }

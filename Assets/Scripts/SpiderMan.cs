@@ -351,10 +351,10 @@ public class SpiderMan : MonoBehaviour
                     _joint.autoConfigureConnectedAnchor = false;
                     _joint.connectedAnchor = _hit.point;
 
-                    _joint.maxDistance = distanceFromPoint * 0.8f;
-                    _joint.minDistance = distanceFromPoint * 0.15f;
+                    _joint.maxDistance = distanceFromPoint * 0.7f;
+                    _joint.minDistance = distanceFromPoint * 0.1f;
                     _joint.spring = 35f;
-                    _joint.damper = 15f;
+                    _joint.damper = 20f;
 
                     WebAS.pitch = Random.Range(0.85f, 1.15f);
                     WebAS.Play();
