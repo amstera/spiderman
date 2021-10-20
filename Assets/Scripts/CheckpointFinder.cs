@@ -10,8 +10,12 @@ public class CheckpointFinder : MonoBehaviour
     public GameObject Spiderman;
     public GameObject CheckpointObjective;
     public Text MinimapDistanceText;
+    public CutScenePlayer CutScenePlayer; 
 
     public GameObject GreenGoblin;
+
+    private bool _waitForVidToFinish;
+    private float _timeSinceVideo;
 
     void Update()
     {
@@ -28,11 +32,23 @@ public class CheckpointFinder : MonoBehaviour
             LineRenderer.SetPosition(i, corners[i] + Vector3.up * 5);
         }
 
-        if (Vector3.Distance(Spiderman.transform.position, Checkpoint.position) < 3)
+        if (_waitForVidToFinish)
         {
-            MinimapDistanceText.text = "";
-            Instantiate(GreenGoblin, Checkpoint.position - Vector3.back * 5, Quaternion.identity);
-            Destroy(CheckpointObjective);
+            if (!CutScenePlayer.VideoPlayer.isPlaying && Time.time - _timeSinceVideo > 1)
+            {
+                MinimapDistanceText.text = "";
+                Instantiate(GreenGoblin, Checkpoint.position - Vector3.back * 5, Quaternion.identity);
+                Destroy(CheckpointObjective);
+            }
+        }
+        else
+        {
+            if (Vector3.Distance(Spiderman.transform.position, Checkpoint.position) < 5)
+            {
+                CutScenePlayer.PlayGoblinClip();
+                _waitForVidToFinish = true;
+                _timeSinceVideo = Time.time;
+            }
         }
     }
 }

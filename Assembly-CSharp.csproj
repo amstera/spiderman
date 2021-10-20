@@ -122,6 +122,7 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
     <Compile Include="Assets/EffectExamples/Shared/Scripts/GunAim.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/CutScenePlayer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/FXAA.shader" />
@@ -788,6 +789,12 @@
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
