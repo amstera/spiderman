@@ -18,6 +18,7 @@ public class SpiderMan : MonoBehaviour
     public AudioSource RunningAS;
     public AudioSource ClimbingAS;
     public AudioSource HurtAS;
+    public AudioSource ThudAS;
 
     private Rigidbody _rigidbody;
     private SpringJoint _joint;
@@ -88,6 +89,7 @@ public class SpiderMan : MonoBehaviour
             if (_inAirTimer > 2.5f && Animator.GetInteger("State") == (int)SpiderManAnimationState.Falling)
             {
                 _isRecovering = true;
+                ThudAS.Play();
                 Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
                 Invoke("Grounded", 0.5f);
             }
@@ -147,6 +149,7 @@ public class SpiderMan : MonoBehaviour
                 _isClimbing = false;
                 ClimbingObject = null;
                 transform.position += Vector3.up * 2.25f + transform.forward / 1.5f;
+                ThudAS.Play();
                 Animator.SetInteger("State", (int)SpiderManAnimationState.HardLanding);
             }
         }
