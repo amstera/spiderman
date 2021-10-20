@@ -12,6 +12,8 @@ public class CutScenePlayer : MonoBehaviour
 
     private void Awake()
     {
+        ClearTexture();
+        CutScene.enabled = true;
         VideoPlayer.Prepare();
     }
 
@@ -20,6 +22,7 @@ public class CutScenePlayer : MonoBehaviour
         if (!VideoPlayer.isPlaying && (Time.time - _timeSinceVidPlay > 2))
         {
             CutScene.enabled = false;
+            ClearTexture();
             VideoPlayer.Stop();
             VideoPlayer.clip = GoblinClip;
             VideoPlayer.Prepare();
@@ -31,5 +34,11 @@ public class CutScenePlayer : MonoBehaviour
         _timeSinceVidPlay = Time.time;
         VideoPlayer.Play();
         CutScene.enabled = true;
+    }
+
+    private void ClearTexture()
+    {
+        RenderTexture.active = VideoPlayer.targetTexture;
+        GL.Clear(true, true, Color.black);
     }
 }

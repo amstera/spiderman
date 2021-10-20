@@ -37,7 +37,8 @@ public class CheckpointFinder : MonoBehaviour
             if (!CutScenePlayer.VideoPlayer.isPlaying && Time.time - _timeSinceVideo > 1)
             {
                 MinimapDistanceText.text = "";
-                Instantiate(GreenGoblin, Checkpoint.position - Vector3.back * 5, Quaternion.identity);
+                Instantiate(GreenGoblin, Checkpoint.position, Quaternion.identity);
+                Spiderman.transform.position = new Vector3(80, 0, 85);
                 Destroy(CheckpointObjective);
             }
         }
