@@ -123,6 +123,7 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
     <Compile Include="Assets/EffectExamples/Shared/Scripts/GunAim.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/PowerGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Resources/Shaders/FXAA.shader" />

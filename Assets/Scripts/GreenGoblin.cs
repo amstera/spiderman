@@ -7,14 +7,28 @@ public class GreenGoblin : MonoBehaviour
     public Transform NavChild;
     public GameObject Grenade;
     public float GrenadeFireIntervalSeconds = 7.5f;
+    public int Health = 4;
+
+    public AudioSource LaughAS;
+    public AudioSource HurtAS;
 
     private SpiderMan _spiderMan;
     private float _timeSinceLastGrenade;
+    private float _timeSinceLastLaugh;
 
     void Awake()
     {
         _spiderMan = FindObjectOfType<SpiderMan>();
         _timeSinceLastGrenade = Time.time;
+    }
+
+    void Update()
+    {
+        if (Time.time - _timeSinceLastLaugh > 5)
+        {
+            LaughAS.Play();
+            _timeSinceLastLaugh = Time.time;
+        }
     }
 
     void LateUpdate()
@@ -28,6 +42,19 @@ public class GreenGoblin : MonoBehaviour
         {
             _timeSinceLastGrenade = Time.time;
             Instantiate(Grenade, transform.position - Vector3.down, transform.rotation);
+        }
+    }
+
+    public void TakeDamage()
+    {
+        Health -= 1;
+        LaughAS.Stop();
+        _timeSinceLastLaugh = Time.time;
+        HurtAS.Play();
+
+        if (Health <= 0)
+        {
+            //die
         }
     }
 }
