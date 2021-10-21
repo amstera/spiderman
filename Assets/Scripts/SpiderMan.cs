@@ -159,7 +159,7 @@ public class SpiderMan : MonoBehaviour
             _moveDirection = transform.up * Input.GetAxisRaw("Vertical");
             _moveDirection += transform.right * Input.GetAxisRaw("Horizontal");
             _moveDirection.Normalize();
-            _moveDirection *= 1.5f;
+            _moveDirection *= 2f;
         }
         else
         {

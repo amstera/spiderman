@@ -5,6 +5,7 @@ public class PowerGenerator : MonoBehaviour
     public GameObject Spiderman;
     public GameObject Explosion;
     public GameObject CheckpointMarker;
+    public GameObject Lightbeam;
 
     public GreenGoblin GreenGoblin;
     public bool IsActive;
@@ -13,6 +14,7 @@ public class PowerGenerator : MonoBehaviour
     {
         IsActive = true;
         CheckpointMarker.SetActive(true);
+        Lightbeam.SetActive(true);
     }
 
     void Update()
@@ -20,6 +22,7 @@ public class PowerGenerator : MonoBehaviour
         if (IsActive && Vector3.Distance(Spiderman.transform.position, transform.position) < 2f && Input.GetKeyDown(KeyCode.E))
         {
             GreenGoblin.TakeDamage();
+            FindObjectOfType<ObjectivePanel>().UpdateCount();
             Instantiate(Explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

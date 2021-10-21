@@ -6,6 +6,7 @@ public class GreenGoblin : MonoBehaviour
     public NavMeshAgent NavMeshAgent;
     public Transform NavChild;
     public GameObject Grenade;
+    public GameObject ParentGameObject;
     public float GrenadeFireIntervalSeconds = 7.5f;
     public int Health = 4;
 
@@ -54,7 +55,7 @@ public class GreenGoblin : MonoBehaviour
 
         if (Health <= 0)
         {
-            //die
+            Destroy(ParentGameObject);
         }
     }
 }

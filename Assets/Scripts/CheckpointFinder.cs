@@ -10,7 +10,8 @@ public class CheckpointFinder : MonoBehaviour
     public GameObject Spiderman;
     public GameObject CheckpointObjective;
     public Text MinimapDistanceText;
-    public CutScenePlayer CutScenePlayer; 
+    public CutScenePlayer CutScenePlayer;
+    public GameObject ObjectivePanel;
 
     public GameObject GreenGoblin;
 
@@ -44,6 +45,7 @@ public class CheckpointFinder : MonoBehaviour
                     powerGenerator.Activate();
                     powerGenerator.GreenGoblin = goblin.GetComponentInChildren<GreenGoblin>();
                 }
+                ObjectivePanel.SetActive(true);
                 Spiderman.transform.position = new Vector3(80, 0, 85);
                 Destroy(CheckpointObjective);
             }
