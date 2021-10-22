@@ -13,6 +13,7 @@ public class SpiderMan : MonoBehaviour
     public LineRenderer LineRenderer;
     public Building ClimbingObject;
     public GameObject Hand;
+    public GameObject ControlsPanel;
 
     public AudioSource WebAS;
     public AudioSource RunningAS;
@@ -409,6 +410,11 @@ public class SpiderMan : MonoBehaviour
 
     private void StopSwinging()
     {
+        if (ControlsPanel.activeSelf)
+        {
+            ControlsPanel.SetActive(false);
+        }
+
         _isSwinging = false;
         Destroy(_joint);
     }
