@@ -3529,7 +3529,7 @@ GameObject:
   - component: {fileID: 767804469}
   - component: {fileID: 767804468}
   m_Layer: 5
-  m_Name: Description Text (1)
+  m_Name: Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4606,11 +4606,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874109950}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -8.04, z: 0}
-  m_LocalScale: {x: 0.7233, y: 0.7232999, z: 0.7232999}
+  m_LocalPosition: {x: 81.1, y: 0.06000042, z: 113.1}
+  m_LocalScale: {x: 0.7233, y: 0.7233, z: 0.7233}
   m_Children: []
   m_Father: {fileID: 2084876327}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &876887992
 PrefabInstance:
@@ -5913,7 +5913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 106}
+  m_AnchoredPosition: {x: 200, y: 100}
   m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072301956
@@ -5929,7 +5929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19223925, g: 0.8312543, b: 0.9056604, a: 0.3137255}
+  m_Color: {r: 0.2747864, g: 0.8313509, b: 0.8962264, a: 0.2901961}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6764,7 +6764,7 @@ Transform:
   - {fileID: 237745403}
   - {fileID: 2017083990}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1256082886
 PrefabInstance:
@@ -6863,11 +6863,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282097686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -79.7, y: -6.92, z: -125.42}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2084876327}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1282097688
 NavMeshAgent:
@@ -9433,7 +9433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -65}
+  m_AnchoredPosition: {x: 0, y: -68}
   m_SizeDelta: {x: 300, y: 5.3747025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534281974
@@ -13484,13 +13484,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084876326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.1, y: 8.1, z: 113.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 874109952}
   - {fileID: 1282097687}
+  - {fileID: 874109952}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2131287794
 PrefabInstance:

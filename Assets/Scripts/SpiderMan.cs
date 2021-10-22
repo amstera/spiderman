@@ -44,10 +44,13 @@ public class SpiderMan : MonoBehaviour
     {
         CheckForWater();
         HandleFalling();
-        HandleMovement();
-        HandleRotation();
-        HandleShootingWeb();
-        HandleReleasingWeb();
+        if (Health > 0)
+        {
+            HandleMovement();
+            HandleRotation();
+            HandleShootingWeb();
+            HandleReleasingWeb();
+        }
     }
 
     void LateUpdate()
@@ -112,9 +115,19 @@ public class SpiderMan : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (Health <= 0)
+        {
+            return;
+        }
+
         Health -= amount;
         HealthBar.UpdateValue(Health);
         HurtAS.Play();
+
+        if (Health <= 0)
+        {
+            Die();
+        }
     }
 
     private void HandleMovement()
@@ -436,6 +449,20 @@ public class SpiderMan : MonoBehaviour
         _isClimbing = false;
         ClimbingObject = null;
         _isFalling = true;
+    }
+
+    private void Die()
+    {
+        if (_isSwinging)
+        {
+            StopSwinging();
+        }
+        else if (_isClimbing)
+        {
+            StopClimbing();
+        }
+
+
     }
 }
 

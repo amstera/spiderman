@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637704632660000000
+      ticks: 637704727360000000
     m_Hash: 2931077658
   m_LockFileStatus:
     m_FilePath: /Users/tylergreen/Games/Spider Man/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637704632670000000
+      ticks: 637704727600000000
     m_Hash: 962002912
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
