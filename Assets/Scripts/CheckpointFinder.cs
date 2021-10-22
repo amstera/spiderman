@@ -21,7 +21,7 @@ public class CheckpointFinder : MonoBehaviour
     void Update()
     {
         MinimapDistanceText.text = $"{Mathf.Round(Vector3.Distance(Checkpoint.position, Spiderman.transform.position))}m";
-        transform.position = Spiderman.transform.position;
+        transform.position = new Vector3(Spiderman.transform.position.x, transform.position.y, Spiderman.transform.position.z);
 
         NavMeshPath path = new NavMeshPath();
         NavMeshAgent.CalculatePath(Checkpoint.position, path);

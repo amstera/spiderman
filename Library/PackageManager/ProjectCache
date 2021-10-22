@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637702969280000000
-    m_Hash: 1218095276
+      ticks: 637704632660000000
+    m_Hash: 2931077658
   m_LockFileStatus:
     m_FilePath: /Users/tylergreen/Games/Spider Man/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637703344170000000
-    m_Hash: 3445705220
+      ticks: 637704632670000000
+    m_Hash: 962002912
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.cinemachine@2.6.10
       testable: 0
       isDirectDependency: 1
@@ -86,6 +137,7 @@ m_PackageAssets:
         - 2.7.4
         - 2.7.5
         - 2.7.8
+        - 2.7.9
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
@@ -114,6 +166,7 @@ m_PackageAssets:
         - 2.7.4
         - 2.7.5
         - 2.7.8
+        - 2.7.9
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
@@ -670,6 +723,7 @@ m_PackageAssets:
         - 3.0.0
         - 3.0.1
         - 4.0.0-pre.1
+        - 4.0.0-pre.2
         compatible:
         - 2.0.0-preview.6
         - 2.0.1-preview.1
@@ -690,6 +744,7 @@ m_PackageAssets:
         - 3.0.0
         - 3.0.1
         - 4.0.0-pre.1
+        - 4.0.0-pre.2
         verified: 2.5.5
       dependencies:
       - name: com.unity.timeline
@@ -1074,12 +1129,14 @@ m_PackageAssets:
         - 1.5.4
         - 1.5.5
         - 1.5.6
+        - 1.5.7
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
         - 1.6.1
         - 1.6.2
+        - 1.6.3
         compatible:
         - 1.4.6
         - 1.4.7
@@ -1097,12 +1154,14 @@ m_PackageAssets:
         - 1.5.4
         - 1.5.5
         - 1.5.6
+        - 1.5.7
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
         - 1.6.1
         - 1.6.2
+        - 1.6.3
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779892769962585925}
   - component: {fileID: 4468506215650102792}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3320304629899823235}
   - component: {fileID: 5401558020346718921}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kamera_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1184957859732559474}
   - component: {fileID: 7324214823934396235}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7526174084092823250}
   - component: {fileID: 5932550272363669624}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3589752585302970971}
   - component: {fileID: 4013106974420492462}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6689282256882908189}
   - component: {fileID: 2625021214721875889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4979048682950016664}
   - component: {fileID: 8916262915286968111}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4162565537931155021}
   - component: {fileID: 8378700322197990104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kamera_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 6592245997822421919}
   - component: {fileID: 1820781488700350980}
   - component: {fileID: 5671380018342100622}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4706064033275578859}
   - component: {fileID: 1984615457367611061}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kamera_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6203427788366218587}
   - component: {fileID: 2335419467752174866}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3410189019275299959}
   - component: {fileID: 5618168613035522386}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kamera_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237274840645679725}
   - component: {fileID: 6124535713800269262}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ligh_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4077494729077784749}
   - component: {fileID: 130992781884493913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kamera_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1389,7 @@ GameObject:
   - component: {fileID: 8532550124714458571}
   - component: {fileID: 6998214991278581152}
   - component: {fileID: 8206416538872471359}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Power Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1442,6 +1442,7 @@ MonoBehaviour:
   Explosion: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
   CheckpointMarker: {fileID: 4367664563344070392}
   Lightbeam: {fileID: 6959951082523405130}
+  GeneratorControlText: {fileID: 0}
   GreenGoblin: {fileID: 0}
   IsActive: 0
 --- !u!82 &8206416538872471359
