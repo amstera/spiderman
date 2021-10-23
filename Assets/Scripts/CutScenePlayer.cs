@@ -8,9 +8,7 @@ public class CutScenePlayer : MonoBehaviour
     public RawImage CutScene;
     public VideoClip GoblinClip;
     public GameObject ControlsPanel;
-
-    public AudioSource Dialog1;
-    public AudioSource Dialog2;
+    public SpiderMan Spiderman;
 
     private float _timeSinceVidPlay;
     private int _cutscenesPlayed;
@@ -20,6 +18,7 @@ public class CutScenePlayer : MonoBehaviour
         ClearTexture();
         CutScene.enabled = true;
         VideoPlayer.Prepare();
+        Spiderman = FindObjectOfType<SpiderMan>();
     }
 
     void Update()
@@ -27,19 +26,18 @@ public class CutScenePlayer : MonoBehaviour
         if (!VideoPlayer.isPlaying && CutScene.enabled && (Time.time - _timeSinceVidPlay > 2))
         {
             CutScene.enabled = false;
-            ClearTexture();
-            VideoPlayer.Stop();
             VideoPlayer.clip = GoblinClip;
             VideoPlayer.Prepare();
+            ClearTexture();
 
             if (_cutscenesPlayed == 1)
             {
-                Dialog2.Play();
+                Spiderman.PlayDialog(2);
             }
             else
             {
                 ControlsPanel.SetActive(true);
-                Dialog1.Play();
+                Spiderman.PlayDialog(1);
             }
             _cutscenesPlayed++;
         }

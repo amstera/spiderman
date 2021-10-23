@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,9 @@ public class SpiderMan : MonoBehaviour
     public AudioSource HurtAS;
     public AudioSource ThudAS;
 
+    public AudioSource Dialog1AS;
+    public AudioSource Dialog2AS;
+
     private Rigidbody _rigidbody;
     private SpringJoint _joint;
     private RaycastHit _hit;
@@ -39,6 +43,7 @@ public class SpiderMan : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        StartCoroutine(AutoHeal());
     }
 
     void Update()
@@ -128,6 +133,18 @@ public class SpiderMan : MonoBehaviour
         if (Health <= 0)
         {
             Die();
+        }
+    }
+
+    public void PlayDialog(int number)
+    {
+        if (number == 1)
+        {
+            Dialog1AS.Play();
+        }
+        else if (number == 2)
+        {
+            Dialog2AS.Play();
         }
     }
 
@@ -468,7 +485,22 @@ public class SpiderMan : MonoBehaviour
             StopClimbing();
         }
 
+        //die
+    }
 
+    private IEnumerator AutoHeal()
+    {
+        yield return new WaitForSeconds(2.5f);
+
+        if (Health > 0 && Health < 100)
+        {
+            Health++;
+            HealthBar.UpdateValue(Health);
+        }
+        if (Health > 0)
+        {
+            StartCoroutine(AutoHeal());
+        }
     }
 }
 
