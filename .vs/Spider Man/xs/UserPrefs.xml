@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CutScenePlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpiderMan.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="406" Column="10" />
-      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="37" Column="14" />
-      <File FileName="Assets/Scripts/PowerGenerator.cs" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="492" Column="30" />
+      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="41" Column="10" />
+      <File FileName="Assets/Scripts/PowerGenerator.cs" Line="50" Column="10" />
       <File FileName="Assets/Scripts/GreenGoblin.cs" />
       <File FileName="Assets/Scripts/CheckpointFinder.cs" />
       <File FileName="Assets/Scripts/CameraManager.cs" />
@@ -24,7 +24,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e2cacce3-19e7-4d72-84dc-67bb52cca16c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="56b70b46-ec45-4392-a229-098083be4a28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

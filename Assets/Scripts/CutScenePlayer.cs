@@ -26,8 +26,6 @@ public class CutScenePlayer : MonoBehaviour
         if (!VideoPlayer.isPlaying && CutScene.enabled && (Time.time - _timeSinceVidPlay > 2))
         {
             CutScene.enabled = false;
-            VideoPlayer.clip = GoblinClip;
-            VideoPlayer.Prepare();
             ClearTexture();
 
             if (_cutscenesPlayed == 1)
@@ -47,7 +45,10 @@ public class CutScenePlayer : MonoBehaviour
     {
         ControlsPanel.SetActive(false);
         _timeSinceVidPlay = Time.time;
+        ClearTexture();
         CutScene.enabled = true;
+        VideoPlayer.clip = GoblinClip;
+        VideoPlayer.Prepare();
         VideoPlayer.Play();
     }
 

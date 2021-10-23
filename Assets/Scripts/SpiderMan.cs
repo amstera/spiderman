@@ -485,12 +485,18 @@ public class SpiderMan : MonoBehaviour
             StopClimbing();
         }
 
-        //die
+        Animator.SetInteger("State", (int)SpiderManAnimationState.Death);
+        Invoke("ResetScene", 4f);
+    }
+
+    private void ResetScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private IEnumerator AutoHeal()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
 
         if (Health > 0 && Health < 100)
         {
@@ -517,5 +523,6 @@ public enum SpiderManAnimationState
     HardLanding = 8,
     Falling = 9,
     Swinging = 10,
-    SwingingBothArms = 11
+    SwingingBothArms = 11,
+    Death = 12
 }
