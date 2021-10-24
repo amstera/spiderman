@@ -6145,6 +6145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountText: {fileID: 978550701}
   TotalCount: 4
+  Count: 0
+  CutScenePlayer: {fileID: 1944484992}
 --- !u!1001 &1079185273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12841,6 +12843,7 @@ MonoBehaviour:
   VideoPlayer: {fileID: 1944484990}
   CutScene: {fileID: 1503169999}
   GoblinClip: {fileID: 32900000, guid: 97a38071201f241fb8fa9ad057b63d09, type: 3}
+  EndClip: {fileID: 32900000, guid: 67044a861090e4a619319b621aa8d0fb, type: 3}
   ControlsPanel: {fileID: 1336397746}
   Spiderman: {fileID: 0}
 --- !u!4 &1944604626 stripped

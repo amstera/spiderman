@@ -7,6 +7,7 @@ public class CutScenePlayer : MonoBehaviour
     public VideoPlayer VideoPlayer;
     public RawImage CutScene;
     public VideoClip GoblinClip;
+    public VideoClip EndClip;
     public GameObject ControlsPanel;
     public SpiderMan Spiderman;
 
@@ -32,7 +33,7 @@ public class CutScenePlayer : MonoBehaviour
             {
                 Spiderman.PlayDialog(2);
             }
-            else
+            else if (_cutscenesPlayed == 0)
             {
                 ControlsPanel.SetActive(true);
                 Spiderman.PlayDialog(1);
@@ -43,18 +44,27 @@ public class CutScenePlayer : MonoBehaviour
 
     public void PlayGoblinClip()
     {
-        ControlsPanel.SetActive(false);
-        _timeSinceVidPlay = Time.time;
-        ClearTexture();
-        CutScene.enabled = true;
-        VideoPlayer.clip = GoblinClip;
-        VideoPlayer.Prepare();
-        VideoPlayer.Play();
+        PlayClip(GoblinClip);
+    }
+
+    public void PlayEndClip()
+    {
+        PlayClip(EndClip);
     }
 
     private void ClearTexture()
     {
         RenderTexture.active = VideoPlayer.targetTexture;
         GL.Clear(true, true, Color.black);
+    }
+
+    private void PlayClip(VideoClip clip)
+    {
+        _timeSinceVidPlay = Time.time;
+        ClearTexture();
+        CutScene.enabled = true;
+        VideoPlayer.clip = clip;
+        VideoPlayer.Prepare();
+        VideoPlayer.Play();
     }
 }

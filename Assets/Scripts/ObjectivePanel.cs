@@ -5,12 +5,18 @@ public class ObjectivePanel : MonoBehaviour
 {
     public Text CountText;
     public int TotalCount = 4;
-
-    private int _count;
+    public int Count;
+    public CutScenePlayer CutScenePlayer;
 
     public void UpdateCount()
     {
-        _count++;
-        CountText.text = $"{_count}/{TotalCount}";
+        Count++;
+        CountText.text = $"{Count}/{TotalCount}";
+
+        if (Count == 4)
+        {
+            CutScenePlayer.PlayEndClip();
+            gameObject.SetActive(false);
+        }
     }
 }
