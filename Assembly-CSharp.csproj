@@ -125,6 +125,7 @@
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Models/ColorGradingModel.cs" />
     <Compile Include="Assets/EffectExamples/Shared/Scripts/GunAim.cs" />
     <Compile Include="Assets/#NVJOB Simple Water Shaders/Example Scenes/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/EndScreen.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -804,6 +805,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -818,9 +822,6 @@
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

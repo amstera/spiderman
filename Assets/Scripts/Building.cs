@@ -15,7 +15,7 @@ public class Building : MonoBehaviour
 
     void Update()
     {
-        if (_spiderMan.transform.position.y >= _meshRenderer.bounds.max.y * HeightPercent)
+        if (_spiderMan != null && _spiderMan.transform.position.y >= _meshRenderer.bounds.max.y * HeightPercent)
         {
             tag = "Walkable";
         }

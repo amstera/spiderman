@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -24,11 +25,13 @@ public class CutScenePlayer : MonoBehaviour
 
     void Update()
     {
-        if (!VideoPlayer.isPlaying && CutScene.enabled && (Time.time - _timeSinceVidPlay > 2))
+        if (!VideoPlayer.isPlaying && CutScene.enabled && (Time.time - _timeSinceVidPlay > 1))
         {
-            CutScene.enabled = false;
-            ClearTexture();
-
+            if (_cutscenesPlayed == 2)
+            {
+                SceneManager.LoadScene(1);
+                return;
+            }
             if (_cutscenesPlayed == 1)
             {
                 Spiderman.PlayDialog(2);
@@ -39,6 +42,9 @@ public class CutScenePlayer : MonoBehaviour
                 Spiderman.PlayDialog(1);
             }
             _cutscenesPlayed++;
+
+            CutScene.enabled = false;
+            ClearTexture();
         }
     }
 

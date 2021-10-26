@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CutScenePlayer.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpiderMan.cs" Line="491" Column="1" />
-      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="39" Column="41" />
-      <File FileName="Assets/Scripts/PowerGenerator.cs" Line="38" Column="58" />
-      <File FileName="Assets/Scripts/GreenGoblin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SpiderMan.cs" Line="22" Column="31" />
+      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="16" Column="34" />
+      <File FileName="Assets/Scripts/PowerGenerator.cs" />
+      <File FileName="Assets/Scripts/GreenGoblin.cs" />
       <File FileName="Assets/Scripts/CheckpointFinder.cs" />
       <File FileName="Assets/Scripts/CameraManager.cs" />
       <File FileName="Assets/Scripts/HealthBar.cs" />
       <File FileName="Assets/Scripts/Grenade.cs" />
       <File FileName="Assets/Scripts/Pedestrian.cs" />
-      <File FileName="Assets/Scripts/Building.cs" />
-      <File FileName="Assets/Scripts/ObjectivePanel.cs" Line="20" Column="10" />
+      <File FileName="Assets/Scripts/Building.cs" Line="23" Column="10" />
+      <File FileName="Assets/Scripts/ObjectivePanel.cs" />
+      <File FileName="Assets/Scripts/EndScreen.cs" Line="12" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,7 +25,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="26fdc3da-4882-4634-9d90-2434fd04631d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d27b4f0e-596d-4f36-88a7-0c179a23041c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
