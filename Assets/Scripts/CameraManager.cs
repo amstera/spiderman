@@ -24,9 +24,18 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
+        HandleQuitting();
         FollowTarget();
         RotateCamera();
         HandleCameraCollisions();
+    }
+
+    private void HandleQuitting()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void FollowTarget()

@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{61E7B366-F206-B1FB-A55C-E5AD3DFA75FE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CutScenePlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraManager.cs">
     <Files>
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="44" Column="85" />
+      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="14" Column="37" />
       <File FileName="Assets/Scripts/SpiderMan.cs" Line="22" Column="31" />
-      <File FileName="Assets/Scripts/CutScenePlayer.cs" Line="16" Column="34" />
       <File FileName="Assets/Scripts/PowerGenerator.cs" />
       <File FileName="Assets/Scripts/GreenGoblin.cs" />
       <File FileName="Assets/Scripts/CheckpointFinder.cs" />
-      <File FileName="Assets/Scripts/CameraManager.cs" />
       <File FileName="Assets/Scripts/HealthBar.cs" />
       <File FileName="Assets/Scripts/Grenade.cs" />
       <File FileName="Assets/Scripts/Pedestrian.cs" />
-      <File FileName="Assets/Scripts/Building.cs" Line="23" Column="10" />
+      <File FileName="Assets/Scripts/Building.cs" />
       <File FileName="Assets/Scripts/ObjectivePanel.cs" />
-      <File FileName="Assets/Scripts/EndScreen.cs" Line="12" Column="6" />
+      <File FileName="Assets/Scripts/EndScreen.cs" Line="8" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +25,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="11c93352-e0a8-4314-9d75-aa6eff28a755" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d27b4f0e-596d-4f36-88a7-0c179a23041c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6da7cc9a-7a46-49d3-8173-989b703e4d88" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

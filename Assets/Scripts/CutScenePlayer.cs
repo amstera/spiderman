@@ -11,6 +11,7 @@ public class CutScenePlayer : MonoBehaviour
     public VideoClip EndClip;
     public GameObject ControlsPanel;
     public SpiderMan Spiderman;
+    public AudioSource GoblinScream;
 
     private float _timeSinceVidPlay;
     private int _cutscenesPlayed;
@@ -55,6 +56,7 @@ public class CutScenePlayer : MonoBehaviour
 
     public void PlayEndClip()
     {
+        GoblinScream.Play();
         PlayClip(EndClip);
     }
 
